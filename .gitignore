@@ -1,0 +1,35 @@
+# Editor
+# IntelliJ
+.idea
+*.iml
+# Eclipse
+bin
+tmp
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.launch
+*.pydevproject
+*.project
+local.properties
+.metadata
+.settings/
+.loadpath
+.recommenders
+# VSCode
+.vscode
+.history
+*.vsix
+# Mac
+.DS_Store
+# Output
+out
+target
+# Possible python usage
+venv
+*.egg-info
+.pytest_cache
+__pycache__
+.coverage
+htmlcov
