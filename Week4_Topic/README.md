@@ -29,3 +29,12 @@ TODO instructions
 
 TODO
 
+## **Task 4** Feedback
+
+Give your feedback on this week's exercises. You can give feedback considering both Moodle and Github exercises.
+
+-What did you like/dislike?
+-Was there a subject from this week's lectures that you would have liked to do a exercise on?
+
+
+
