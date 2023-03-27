@@ -20,7 +20,7 @@ This task requires `docker`.
 
 ## Summary
 
-You have tasked to test a new banking application developed by an intern at OUSPG which is riddled with bugs and flaws
+You have been tasked to test a new banking application developed by an intern at OUSPG which is riddled with bugs and flaws
 in software design. In this exercise we will mainly look over the most obvious flaws in the application and focus on
 subdomain takeover.
 
