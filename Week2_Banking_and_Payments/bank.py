@@ -143,24 +143,33 @@ class Site:
         """
         <div style='
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-gap: .5vh;
-            justify-items: start;
+            justify-items: center;
             align-items: center;
             font-family: monospace;
         '>
             <p>Welcome: {username}</p>
-            <p>Balance: {balance:.2f}</p>
             <input type='button' value='logout' onclick='logout()'/>
-            <br>
-            <p>Send Money</p>
-            <label>Amount
-                <input type='number' id='amount'>
-            </label>
-            <label>To
-                <input type='text' id='to'>
-            </label>
-            <input type='button' value='Send' onclick='{onclick}'>
+            <p style='grid-column: 1 / span 2'>Balance: {balance:.2f}</p>
+            <div style='
+                grid-column: 1 / span 2;
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: stretch;
+                justify-items: stretch;
+                grid-gap: 1vh;
+                margin: 1vh;
+            '>
+                <p style='margin-top: 1vh'>Send Money</p>
+                <label>Amount
+                    <input type='number' id='amount' style='width: 100%'>
+                </label>
+                <label>To
+                    <input type='text' id='to' style='width: 100%'>
+                </label>
+                <input type='button' value='Send' onclick='{onclick}'>
+            </div>
         </div>
         """
     )
@@ -295,8 +304,8 @@ class Site:
             align-items: center;
         '>
             <div style='
-                width: 20%;
-                height: 20%;
+                min-width: 20%;
+                min-height: 20%;
                 background: lightblue;
                 display: grid;
                 grid-template-columns: 1fr;
