@@ -245,7 +245,7 @@ Only looking at DNS data, can you tell who hosts the domain `ouspg.org`
 
 ```
 
-Take a look at the code for the [banking application](bank.py) and find out at least three major points where the
+(Optional) Take a look at the code for the [banking application](bank.py) and find out at least three major points where the
 development has gone terribly wrong. Summarize in a few sentences to what type of attacks could the application be
 vulnerable to or what major security flaws it has:
 
