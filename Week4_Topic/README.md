@@ -125,7 +125,7 @@ The site should be frozen since we have intercepted the POST request. We can now
 
 ![interception2](https://user-images.githubusercontent.com/44393530/225861303-69ecc52f-ca2c-40a0-97f9-bb50fb9e827b.PNG)
 
-Turn off interception and find the edited request from HTTP history. As your returnable, add a screenshot of your edited post so that all the following information is visible.  
+Turn off interception and find the edited request from HTTP history. It should show the 'Original Request' at first. Click the 'Original Request' button to reveal a dropdown menu and choose 'Edited Request'. Now your changes should be visible in the inspector. As your returnable, add a screenshot of your edited post so that all the following information is visible.  
 
 -**Listing of the last POST and GET request including timestamps and port**  
 -**Atleast 15 rows of the Edited POST request in Raw format**  
