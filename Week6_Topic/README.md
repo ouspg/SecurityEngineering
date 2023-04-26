@@ -4,7 +4,7 @@
 
 - Task 1: 1 point
 - Task 2: 1 point
-- Task 3: 2 points
+- Task 3: 2 points, one point for each part, max 2 points
 
 ## **Task 3**: Securing Docker
 
@@ -12,7 +12,7 @@
 
 In this exercise we are checking out some tools to help you create better and more secure Docker containers. You are to either use your own Dockerfiles or images, create your own dockerfile for this exercise or you can use ones created by other people. The important part here is auditing and fixing the file, image or container. And you shouldn't use ones that have been audited; the files you choose for this task should provide some warnings, this is likely with most files.
 
-> A small warning, as these tool can be quite complicated, if you have not used similar tools before, reading the documentation may take some time.
+> A small warning, as these tools can be quite complicated, so if you have not used similar tools before, reading the documentation will take some time.
 
 **Task 1A) Linting the Dockerfile**
 
@@ -53,7 +53,7 @@ Finally we are going to look at the runtime security of containers, here again y
 
 Your goal here is to trigger alerts with the Falco tool, you can do this with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert. However if you can, try to trigger another alert from inside the container, here again their documentation provides great instructions on which types of activities create alerts.
 
-> A good video with nice demo to help if documentation starts feeling dry: [The Video](https://www.youtube.com/watch?v=rBqBrYESryY&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
+> A good video with nice demo to help if the reading the documentation gets bland: [The Video](https://www.youtube.com/watch?v=rBqBrYESryY&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
 
 ### What to return:
 - What runtime security scanner you used
