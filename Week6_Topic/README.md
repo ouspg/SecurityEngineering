@@ -8,9 +8,11 @@ Task 1 | 1 | Secure running environment? (Moodle)
 Task 2 | 1 | Supply chain attacks (Moodle)
 Task 3 | 2 | Securing docker (A+B=1p & C=1p)
 
+---
+
 ## **Task 3**: Securing Docker
 
-**Linux server type VM recommended. Follow instructions in [LINK]()**
+**Linux required for full completion; [Course provided VM](https://github.com/ouspg/vms)**
 
 In this exercise we are checking out some tools and practices to help you create better and more secure Docker containers. You are to either use your own Dockerfiles or images, create your own dockerfile for this exercise or you can use ones created by other people. The important part here is auditing and fixing the files, image or container. You shouldn't use ones that have been well audited; the files you choose for this task should provide some output, this is likely with most files.
 
@@ -20,11 +22,13 @@ Your analysis with Trivy (or scanner of your choice) can be opened as an issue, 
 
 > A small warning, as some of these tools can be quite complicated, reading through the documentation could take some time. All necessary parts **should** be in this task sheet, but not all problems can be covered. And due to the nature of the course, we expect students to be able to read and take in documentations.
 
-**Task 3A) Linting the Dockerfile** 0.5p
+---
+
+## Task 3A) Linting the Dockerfile 0.5p
 
 We will start by first linting the Dockerfile, this will let you know of problems with the configuration, for example using the ```:latest``` tag. These tools will guide you towards  the best practices regarding [Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/). 
 
-You are free to use any Dockerfile linting tool you want, however a great tool worthy of a recommendation is [Hadolint](https://github.com/hadolint/hadolint), they also have a [GUI Web tool](https://hadolint.github.io/hadolint/) for those interested. The web tool is quite great, but doesn't offer the same customizability as the CLI tool, the functionality should be enough for this task, especially if you don't feel comfortable on the command line. As stated on their GitHub, the tool can also be run on Docker, this makes it easier to run on different environments. ```docker pull hadolint/hadolint``` to pull the image. 
+You are free to use any Dockerfile linting tool you want, however a great tool worthy of a recommendation is [Hadolint](https://github.com/hadolint/hadolint), they have the tool packaged into a container and they also have a [GUI Web tool](https://hadolint.github.io/hadolint/) for those interested. The web tool is quite great, but doesn't offer the same customizability as the CLI tool, the functionality should be enough for this task, especially if you don't feel comfortable on the command line. As stated, the tool can also be run on Docker, this makes it easier to run on different environments. ```docker pull hadolint/hadolint``` to pull the image. 
 
 The Hadolint docker container has been pulled on the course VMs and can be run with:  
 ```docker run --rm -i hadolint/hadolint < Dockerfile```
@@ -33,7 +37,7 @@ The Hadolint docker container has been pulled on the course VMs and can be run w
 
 Depending on the type of Dockerile you are linting and which tool you are using to do this, you will be presented either with just the problems or the tool can give you directions on fixing these issues. 
 
-Not all problems indicated by the tool have to be fixed, and not all warnings should be fixed blindly, but of course you should aim for fixing everything you can while not breaking the program.
+Not all problems indicated by the tool have to be fixed, and not all warnings should be fixed blindly, but of course you should aim for fixing everything you can, while not breaking the program.
 
 ### What to return:
 - What linter you used
@@ -43,39 +47,60 @@ Not all problems indicated by the tool have to be fixed, and not all warnings sh
 [Hadolint](https://github.com/hadolint/hadolint)  
 [Hadolint Web GUI](https://hadolint.github.io/hadolint/) 
 
-**Task 3B) Image analysis** 0.5p
+---
 
-Next comes analyzing the image for vulnerabilities in containers. It is also common to use these scanners in CI/CD pipelines. You can use any analyzer you want, but we're going to recommend [Trivy](https://github.com/aquasecurity/trivy). Trivy is an open source project by [Aquasecurity](https://www.aquasec.com/), and it has quite the nice [documentation](https://aquasecurity.github.io/trivy/v0.41/). This task should be doable without reading too much documentation, we do  however recommend checking it out.  They cover at least **most common** use cases and problems there. You can also refer to this documentation if you want to know more about the tool itself and other ways you can use it, such as Kubernetes and GitHub repository scanning.
+## Task 3B) Container Image Analysis 0.5p
+
+Next comes analyzing the image for vulnerabilities in containers. It is also common to use these scanners in CI/CD pipelines. Again, you can use any analyzer you want, but we're going to recommend [Trivy](https://github.com/aquasecurity/trivy). Trivy is an open source project by [Aquasecurity](https://www.aquasec.com/), and it has quite the nice [documentation](https://aquasecurity.github.io/trivy/v0.41/). This task should be doable without reading too much documentation, we do  however recommend checking it out.  They cover at least **most common** use cases and problems there. You can also refer to this documentation if you want to know more about the tool itself and other ways you can use it, such as Kubernetes, filesystem and GitHub repository scanning.
 
 The tool has been installed on the course VMs and can be run with:  
 ```trivy image <image_name>``` for Docker images  
 ```trivy fs <folder_or_file>``` for Filesystem  
   
-Here you should **try** to fix atleast some errors, the recommended tool Trivy can tell you if a vulnerable piece of software has a patch or a newer version that fixed the vulnerability. However we do understand that not every vulnerability can be fixed.
+Here you should **try** to fix atleast some errors, the recommended tool Trivy can tell you if a vulnerable piece of software has a patch or a newer version that addressed the vulnerability. However we do understand that not every vulnerability can be fixed.
 
 ### What to return:
 - What analyzer you used
 - The image used, **or** the Dockerfile to build it
-- Screenshot **or** .md file of the analyzer output before and (if you did fix something) after the fixes
+- Screenshot **or** .md file of the analyzer output before and after the fixes
 
 [Trivy](https://github.com/aquasecurity/trivy)  
 [Trivy docs](https://aquasecurity.github.io/trivy/v0.41/)
 
-**Task 3C) Runtime Security** 1p
+---
+
+## Task 3C) Runtime Security 1p
 
 Finally we are going to look at the runtime security of containers, here again you can use any tool you want to, but we're going to recommend a tool originally by [Sysdig](https://sysdig.com/), currently under [CNCF](https://www.cncf.io/). The tool [Falco](https://github.com/falcosecurity/falco) is designed to detect and alert in real-time. The tool is for Linux operating systems.
 
-They as well have a vast and deatailed [documentation](https://falco.org/docs/) with multiple ways to install and run the tool. The documentation has instructions for [installing on different Linux distributions](https://falco.org/docs/getting-started/source/), and we recommend following these, or following their own [tutorials](https://falco.org/docs/tutorials/).
+They as well have a vast and very detailed [documentation](https://falco.org/docs/) with multiple ways to install and run the tool. The documentation has instructions for [installing on different Linux distributions](https://falco.org/docs/getting-started/source/), and we recommend following either these, or installing the [falco binary](https://falco.org/docs/getting-started/installation/#falco-binary). You can also use their own [tutorials](https://falco.org/docs/tutorials/) to get more familiar with the tool.
 
-> Falco has been installed on the course VMs, however depending on the way used, might require configuration.
+> [Falco binary](https://falco.org/docs/getting-started/installation/#falco-binary) has been installed on the [course VM](https://github.com/ouspg/vms), however depending on the way used, might require configuration.
 
-Your goal here is to start the tool, choose the rules, and trigger alerts about and/or from containers with the tool. One easy way you can trigger an alert is with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert. <br> However you are to trigger another alert regarding containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
+### Task 3C) part 1: Triggering Alerts 0.5p
+
+Your goal here is to choose the rules, start the tool and trigger alerts about and from within the containers. One easy way you can trigger an alert is with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert.  
+However you are to trigger another alert regarding containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
+
+You can modify the rules provided, it is encouraged to take look at least. They can be found from within the falco folder on the [course VM](https://github.com/ouspg/vms). 
 
 ### What to return:
 - What runtime security scanner you used
 - The image used, **or** the Dockerfile to build it
 - Screenshot **or** .md file of the alerts created
-- What commands used to trigger the alerts
+- What commands and/or activities used to trigger the alerts
+
+### Task 3C) part 2: Log Analysis 0.5p
+
+#### TODO
+
+Task about recognizing what happens inside a container. Container under development.
+
+### What to return:
+- What runtime security scanner you used
+- The image used, **or** the Dockerfile to build it
+- Screenshot of some of the meaningful alerts created
+- Written answer about what was happening inside the container
 
 [Falco](https://github.com/falcosecurity/falco)  
 [Falco docs](https://falco.org/docs/)
