@@ -80,7 +80,10 @@ They as well have a vast and very detailed [documentation](https://falco.org/doc
 ### Task 3C) part 1: Triggering Alerts 0.5p
 
 Your goal here is to choose the rules, start the tool and trigger alerts about and from within the containers. One easy way you can trigger an alert is with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert.  
-However you are to trigger another alert regarding containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
+
+However you are to trigger another alert from within the containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
+
+> `docker run -it <image_name> sh` can be used to start an interactive shell in a container. You can use any shell you want, like bash, but not every distribution, or container has it.
 
 You can modify the rules provided, it is encouraged to take look at least. They can be found from within the falco folder on the [course VM](https://github.com/ouspg/vms). 
 
