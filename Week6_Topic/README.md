@@ -10,7 +10,51 @@ Task 3 | 2 | Securing docker (A+B=1p & C=1p)
 
 ---
 
-## **Task 3**: Securing Docker
+# Tasks
+
+## Task 1: Secure Running Environment?
+
+It is important to understand the differences and security capabilities of the concepts listed below. Choose two out of the four concepts and write a short explanation of them and their respective security capabilities and incapabilities.
+Focus on giving a good overview of the security limits for the concepts.
+
+- TPM
+- Enclave
+- Container
+- Virtualization
+
+**Minimum** 300 words excluding sources.
+
+## Task 2: Supply Chain Attacks
+
+In this task we are looking at the difficulties handling supply chain attacks, specifically detecting and responding.
+
+For this scenario you are working for a networking hardware and software company, and you're tasked with securing their supply chain. The company manufactures and sells routers with their own software and other various networking accessories B2B and B2C.  Some parts for the routers have to be outsourced and manufactured outside company.
+
+Research and write a report on concrete actions you could implement on the supply chain, trying to make sure the product is not being tampered or researched with malicious intent. Keep in mind, that the supply chain includes third party tools, code and update providing, as well as other companies maintaining firmware. Your supply chain must include **at least** four other actors in addition to your company. You should analyze the points of concerns in the report.
+
+Provide reasoning for your choices and analyze what potential problems and additional actions these choices might require from your company.
+
+Probable actors in such supply chains include, but are not limited to:
+
+- Employees, in-house and outsourced
+- Transportation companies
+- Retail companies
+- Storage facilities
+- Part suppliers
+
+Some concepts to help you get started:
+- NDR (Network Detection and Response)
+- UBA (User Behavioral Analytics)
+- EDR (Endpoint Detection and Response)
+- TPM (Trusted Platform Module)
+
+Real-life cases for inspiration:
+- [SolarWinds](https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic)
+- [Routers, servers and networking equipment from the USA](https://www.infoworld.com/article/2608141/snowden--the-nsa-planted-backdoors-in-cisco-products.html) | Notice the second page accessible at the bottom of the article
+
+**Minimum 500 words excluding sources**
+
+## Task 3: Securing Docker
 
 **Linux required for full completion; [Course provided VM](https://github.com/ouspg/vms)**
 
