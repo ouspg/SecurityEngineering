@@ -1,6 +1,134 @@
-# Task 4: Subdomain Takeover
+# Week 2
 
-Tasks 1-3 are in moodle.
+## Grading
+
+**ADD GRADING**
+
+Each task is worth 1 point.
+
+# Tasks
+
+## Task 1: Choose A ***or*** B
+
+### Task 1A: Browsers and Banking Security
+
+Online Banking is of the most lucrative targets for phishing and scams. How do our browsers protect us against them?
+
+Look at the following snippets from a browsers address bar:
+
+![Bank image 1](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_1.png)
+
+![Bank image 2](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_2.png)
+
+![Bank image 3](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_3.png)
+
+**Questions:**
+
+- What does the "Not Secure" warning mean in the first picture and what risks does visiting sites with the warning pose?
+- Why does the second site show up as "trusted" to the browser?
+- What other ways are there to detect a phishing/scam site? 
+    - Are there any tools available online?
+- What is typosquatting and how does it relate to the pictures?
+    - What is **UDRP** and how does it help with combatting typosquatting?
+    - If you were to own the domain **ouspg.org** and would be running your crypto banking application at **bank.ouspg.org**, what domains could you monitor for warning signs of possible phishing attempts against your customers?
+
+
+### Task 1B: Certificates
+
+You have probably seen the following kind of warning when browsing the internet:
+
+![Certificate image 1](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/certificate_1.png)
+
+**Questions:**
+
+- What are digital certificates used for?
+    - Why are certificates important for online payments and banking security?
+    - What other uses do certificates have?
+- What kind of attacks does TLS mitigate and why is this important for online banking?
+- How do browsers use certificates for ensuring browsing security?
+    - What does the warning in the picture above mean?
+
+**Certificate Authorities**
+
+Read the following entries on Certificate Authorities and Certificate Transparency and answer questions:
+
+https://en.wikipedia.org/wiki/Certificate_authority
+https://en.wikipedia.org/wiki/Certificate_Transparency
+https://certificate.transparency.dev/howctworks/
+https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
+
+**Questions:**
+
+- Why would it be bad if a trusted certificate authority was compromised?
+- Why is certificate transparency important?
+
+
+## Task 2: Cards and Payments
+
+**Read the following:**
+
+https://en.wikipedia.org/wiki/Payment_card
+https://en.wikipedia.org/wiki/EMV
+https://en.wikipedia.org/wiki/Multi-factor_authentication
+
+**Questions: Payments**
+
+- Why do modern payment cards use a chip and not a magnetic stripe?
+- What are EMV Certificates and why are they relevant for payment protection?
+- What attacks exist against payment cards?
+    - Card-not-present?
+    - Contactless payment?
+
+**Questions: MFA**
+
+- How is multi-factor authentication (MFA) used in banking?
+- How does multi-factor authentication increase payment security?
+- What MFA methods are you using in you daily life?
+- What attacks exists against different forms of 2FA?
+    - Time-based-one-time-password?
+    - Text Message?
+
+
+## Task 3: Card Fraud
+
+One part of understanding payment card security is monitoring how the cards are used for frauds. The following articles are reports on card fraud by the European Central Bank and will give you an overview of how the fraud landscape has evolved between 2008-2019. Read through the articles and then answer the questions in the questions section.
+
+**Read the following reports:**
+
+
+https://www.ecb.europa.eu/pub/pdf/cardfraud/cardfraudreport201207en.pdf
+https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202008~521edb602b.en.html
+https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202110~cac4c418e8.en.html
+
+**Supporting Resources:**
+
+https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html (Search: "Fraud")
+https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.html
+
+
+**Questions:**
+
+Write a summary (max 800 words) on "Evolution of card fraud" in which you answer at least the following questions:
+
+- What kinds of card fraud exist?
+    - How does card fraud type prevalence differ geographically?
+- How has the fraud landscape changed between 2008-2019? Why?
+    - What type of fraud has seen a notable increase during the last decade?
+    - What technologies or regulations have had an impact on card fraud?
+- How has the transaction landscape changed in the same period?
+    - What kind of transactions have become increasingly popular?
+    - What kind of transactions have had a high risk of being fraudulent?
+        - Has this changed at all during 2008-2019?
+- What effect has internet and e-commerce had on card fraud?
+- Why is preventing data breaches important in preventing card fraud?
+    - How does payment card tokenisation help in this?
+-Anything interesting you found?
+
+# Task 4: Subdomain Takeover ***or*** Non-Technical Alternative
+
+## Task 4: Subdomain Takeover
+
+Practising use of browser developer tools and Python by playing out an example scenario of subdomain takeover on a simple Banking application.
 
 ## Pretask
 
@@ -253,3 +381,12 @@ vulnerable to or what major security flaws it has:
 
 
 ```
+
+## Task 4: Non-Technical Alternative
+
+If you cannot complete the technical exercises you can alternatively complete all of:
+
+Task 1.A and Task 1.B
+- Write further analysis on the effects of PSD2 on payment security for Task 3 (max 250 words)
+- Write a short (max 500 words) analysis on the effects of emerging AI-technologies on online banking frauds and biometric authentication with at least two examples where it has already been used in frauds or other criminal activities.
+- Summarize what is subdomain takeover and what measures can an organization take to protect itself from it (max 250 words)
