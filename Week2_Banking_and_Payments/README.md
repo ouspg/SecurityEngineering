@@ -16,11 +16,11 @@ Online Banking is of the most lucrative targets for phishing and scams. How do o
 
 Look at the following snippets from a browsers address bar:
 
-![Bank image 1](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_1.png)
+![Bank image 1](https://github.com/ouspg/SecurityEngineering/blob/main/Week2_Banking_and_Payments/Images/bank_1.png)
 
-![Bank image 2](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_2.png)
+![Bank image 2](https://github.com/ouspg/SecurityEngineering/blob/main/Week2_Banking_and_Payments/Images/bank_2.png)
 
-![Bank image 3](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/bank_3.png)
+![Bank image 3](https://github.com/ouspg/SecurityEngineering/blob/main/Week2_Banking_and_Payments/Images/bank_3.png)
 
 **Questions:**
 
@@ -37,7 +37,7 @@ Look at the following snippets from a browsers address bar:
 
 You have probably seen the following kind of warning when browsing the internet:
 
-![Certificate image 1](https://github.com/ouspg/SecurityEngineering/tree/main/Week2_Banking_and_Payments/Images/certificate_1.png)
+![Certificate image 1](https://github.com/ouspg/SecurityEngineering/blob/main/Week2_Banking_and_Payments/Images/certificate_1.png)
 
 **Questions:**
 
