@@ -21,15 +21,20 @@ See laboratory and virtual machine instructions over [here.](https://ouspg.org/r
 
 ### Grading
 
-The course can be passed by completing the questionnaires in the Moodle workspace.
+The course can be passed by completing the questionnaires in the Moodle workspace **(Grade 1)**.  
 These will be released weekly and will handle current course affairs.
+
+> **Note**
+> This is subject to change
 
 Total Points|Total Grade
 :-:|:-:
-X+ | 2
-X+ | 3
-X+ | 4
-X+ | 5
+7+ | 2
+14+ | 3
+20+ | 4
+26+ | 5
+
+***Maximum points: 28p***
 
 ## General material
 
@@ -37,4 +42,4 @@ X+ | 5
 
 **[Online Lectures by Ross Anderson & Sam Ainsworth](https://www.youtube.com/@securityengineering1350) for a Security Engineering class at Edinburgh**
 
-There will be plenty of additional sources and material for every week in corresponding exercises.
+There will be plenty of additional sources and material for every week in the corresponding exercises.

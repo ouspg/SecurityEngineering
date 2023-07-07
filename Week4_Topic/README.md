@@ -1,14 +1,18 @@
 # **Week 4**
 
-## Grading
+### Grading
 
-Task1: 1p
-Task2: 1p
-Task3: 2p
+Task #|Points|Description|
+-----|:---:|----------|
+Task 1 | 1 | Side-channels
+Task 2 | 1 | Slow Loris
+Task 3 | 2 | BurpSuite 
+
+---
 
 # Tasks
 
-## Task 1: Side-channels
+### Task 1: Side-channels
 
 Choose an example of a side-channel attack and explain the following information about it:
 
@@ -24,9 +28,9 @@ Choose an example of a side-channel attack and explain the following information
 
 List sources and keep the answer concise at max 300 words not including sources.
 
+---
 
-
-# Task 2: Slow Loris
+### Task 2: Slow Loris
 
 **HOX! Consider Slow Loris as a type of attack rather than the 'slowloris' program itself**
 
@@ -44,8 +48,9 @@ Seek information about the Slowloris Denial-of-Service attack and answer to the 
 
 List sources and keep the answer concise at max 300 words not including sources
 
+---
 
-## **Task 3**: BurpSuite Introduction
+### **Task 3**: BurpSuite Introduction
 
 In this exercise we will take a brief look at a popular web security testing tool called BurpSuite. The exercise requires quite a lot of setup and running an intentionally vulnerable web application (although locally), so using a Virtual Linux Machine is heavily recommended. All the following instructions will be for **Linux only**  
 

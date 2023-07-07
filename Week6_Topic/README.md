@@ -1,18 +1,18 @@
 # **Week 6**
 
-## Point distribution
+### Grading
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Secure running environment? (Moodle)
-Task 2 | 1 | Supply chain attacks (Moodle)
-Task 3 | 2 | Securing docker (A+B=1p & C=1p)
+Task 1 | 1 | Secure Running Environment
+Task 2 | 1 | Supply Chain Attacks 
+Task 3 | 2 | Securing docker
 
 ---
 
 # Tasks
 
-## Task 1: Secure Running Environment?
+### Task 1: Secure Running Environment?
 
 It is important to understand the differences and security capabilities of the concepts listed below. Choose two out of the four concepts and write a short explanation of them and their respective security capabilities and incapabilities.
 Focus on giving a good overview of the security limits for the concepts.
@@ -24,7 +24,9 @@ Focus on giving a good overview of the security limits for the concepts.
 
 **Minimum** 300 words excluding sources.
 
-## Task 2: Supply Chain Attacks
+---
+
+### Task 2: Supply Chain Attacks
 
 In this task we are looking at the difficulties handling supply chain attacks, specifically detecting and responding.
 
@@ -54,7 +56,9 @@ Real-life cases for inspiration:
 
 **Minimum 500 words excluding sources**
 
-## Task 3: Securing Docker
+---
+
+### Task 3: Securing Docker
 
 **Linux required for full completion; [Course provided VM](https://github.com/ouspg/vms)**
 
@@ -68,7 +72,7 @@ Your analysis with Trivy (or scanner of your choice) can be opened as an issue, 
 
 ---
 
-## Task 3A) Linting the Dockerfile 0.5p
+### Task 3A) Linting the Dockerfile 0.5p
 
 We will start by first linting the Dockerfile, this will let you know of problems with the configuration, for example using the ```:latest``` tag. These tools will guide you towards  the best practices regarding [Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/). 
 
@@ -93,7 +97,7 @@ Not all problems indicated by the tool have to be fixed, and not all warnings sh
 
 ---
 
-## Task 3B) Container Image Analysis 0.5p
+### Task 3B) Container Image Analysis 0.5p
 
 Next comes analyzing the image for vulnerabilities in containers. It is also common to use these scanners in CI/CD pipelines. Again, you can use any analyzer you want, but we're going to recommend [Trivy](https://github.com/aquasecurity/trivy). Trivy is an open source project by [Aquasecurity](https://www.aquasec.com/), and it has quite the nice [documentation](https://aquasecurity.github.io/trivy/v0.41/). This task should be doable without reading too much documentation, we do  however recommend checking it out.  They cover at least **most common** use cases and problems there. You can also refer to this documentation if you want to know more about the tool itself and other ways you can use it, such as Kubernetes, filesystem and GitHub repository scanning.
 
@@ -113,7 +117,7 @@ Here you should **try** to fix atleast some errors, the recommended tool Trivy c
 
 ---
 
-## Task 3C) Runtime Security 1p
+### Task 3C) Runtime Security 1p
 
 Finally we are going to look at the runtime security of containers, here again you can use any tool you want to, but we're going to recommend a tool originally by [Sysdig](https://sysdig.com/), currently under [CNCF](https://www.cncf.io/). The tool [Falco](https://github.com/falcosecurity/falco) is designed to detect and alert in real-time. The tool is for Linux operating systems.
 

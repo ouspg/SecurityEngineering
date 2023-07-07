@@ -1,16 +1,21 @@
 # Week 2
 
-## Grading
+### Grading
 
-**ADD GRADING**
+Task #|Points|Description|
+-----|:---:|----------|
+Task 1 | 1 | Browsers and Banking Security ***or*** Certifcates
+Task 2 | 1 | Cards and Payments
+Task 3 | 1 | Card Fraud
+Task 4 | 1 | Subdomain Takeover ***or*** Non-technical Alternative 
 
-Each task is worth 1 point.
+---
 
 # Tasks
 
-## Task 1: Choose A ***or*** B
+### Task 1: Choose A ***or*** B
 
-### Task 1A: Browsers and Banking Security
+#### Task 1A: Browsers and Banking Security
 
 Online Banking is of the most lucrative targets for phishing and scams. How do our browsers protect us against them?
 
@@ -33,7 +38,7 @@ Look at the following snippets from a browsers address bar:
     - If you were to own the domain **ouspg.org** and would be running your crypto banking application at **bank.ouspg.org**, what domains could you monitor for warning signs of possible phishing attempts against your customers?
 
 
-### Task 1B: Certificates
+#### Task 1B: Certificates
 
 You have probably seen the following kind of warning when browsing the internet:
 
@@ -62,8 +67,9 @@ https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
 - Why would it be bad if a trusted certificate authority was compromised?
 - Why is certificate transparency important?
 
+---
 
-## Task 2: Cards and Payments
+### Task 2: Cards and Payments
 
 **Read the following:**
 
@@ -88,8 +94,9 @@ https://en.wikipedia.org/wiki/Multi-factor_authentication
     - Time-based-one-time-password?
     - Text Message?
 
+---
 
-## Task 3: Card Fraud
+### Task 3: Card Fraud
 
 One part of understanding payment card security is monitoring how the cards are used for frauds. The following articles are reports on card fraud by the European Central Bank and will give you an overview of how the fraud landscape has evolved between 2008-2019. Read through the articles and then answer the questions in the questions section.
 
@@ -124,9 +131,11 @@ Write a summary (max 800 words) on "Evolution of card fraud" in which you answer
     - How does payment card tokenisation help in this?
 -Anything interesting you found?
 
-# Task 4: Subdomain Takeover ***or*** Non-Technical Alternative
+---
 
-## Task 4: Subdomain Takeover
+## Task 4: Subdomain Takeover ***or*** Non-Technical Alternative
+
+### Task 4: Subdomain Takeover
 
 Practising use of browser developer tools and Python by playing out an example scenario of subdomain takeover on a simple Banking application.
 
@@ -382,7 +391,9 @@ vulnerable to or what major security flaws it has:
 
 ```
 
-## Task 4: Non-Technical Alternative
+---
+
+### Task 4: Non-Technical Alternative
 
 If you cannot complete the technical exercises you can alternatively complete all of:
 

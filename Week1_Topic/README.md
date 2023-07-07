@@ -1,24 +1,29 @@
 # Week 1
 
-### Grading
-Task 1: 1 point
+### Grading 
 
-Task 2: 1 point
+Task #|Points|Description|
+-----|:---:|----------|
+Task 1 | 1 | Measures Against Cyber Crimes
+Task 2 | 1 | Personal Threat Model
+Task 3 | 2 | Company Security Policy
 
-Task 3: 2 points
+---
 
 # Tasks
 
-## Task 1 
-What measures have you taken to protect yourself from cyber crimes?
+### Task 1: What measures have you taken to protect yourself from cyber crimes?
+
 Write a short description of the actions you have done to fortify you defenses towards all sorts of cyber crimes, including possible servers and accounts you have. Please keep in mind not to include any specific details, such as passwords or tokens.
 
 Have you been a victim of cyber crimes and do you think you could have prevented them? For example phishing and malware attacks. What could you improve on?
 
 Please keep your answer concise, but at **minimum** 150 words.
 
-## Task 2 
-Personal Threat Model
+---
+
+### Task 2: Personal Threat Model
+
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
 In this task we are focusing solely on the cyber side of threat models as you will be creating a personal threat model to identify and assess potential threats to your assets, for example sensitive information and online accounts.
@@ -45,7 +50,9 @@ You can find more information on [OWASP Threat modelling](https://owasp.org/www-
 
 We also recommend creating a visual representation of your threat model, diagrams and flowcharts are good for this. Discussing with your classmates can also help with any additional measures you can take to reduce your risks.
 
-## Task 3 Company Security Policy
+---
+
+### Task 3: Company Security Policy
 Pick topics from the list below to write a security policy on.
 You can choose to write policies for two topics for 2 points or write one policy for 1 point.
 An effort should be made to include one policy on one page. 
