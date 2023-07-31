@@ -78,6 +78,8 @@ These policies are to be kept quite straight-forward and easily understandable f
 You should also check [this](https://csrc.nist.rip/publications/nistpubs/800-12/800-12-html/chapter5.html) for detailed advice and explanation on for example types of policies. For example chapter 5.2.2 gives good insight on what basic components are good for issue-specific policies.
 You don't have to contain yourself to just text, you may include for example pictures and data-flow charts where beneficial.
 
+---
+
 ### Task 4: Security Audit
 
 In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data.
@@ -87,7 +89,7 @@ In the previous tasks we tried to map out our precious data and security of our 
 Let's start with a network scan, by now most will have already heard about [NMAP](https://nmap.org/); a network mapper which is 
 > "A free and open source utility for network exploration and security auditing" -[NMAP Book](https://nmap.org/book/preface.html) 
 
-If you're already familiar with the tool, you can go ahead and skip to the [return section](https://github.com/ouspg/SecurityEngineering/tree/main/Week1_Topic#Task-4-what-to-return). NMAP is available as both a CLI and [GUI (Zenmap)](https://nmap.org/zenmap/) application, most of the time you will use nmap from the command line. There are some benefits to Zenmap, such as the topology map, and we are going to showcase that here in this task. 
+NMAP is available as both a CLI and [GUI (Zenmap)](https://nmap.org/zenmap/) application, most of the time you will use nmap from the command line. There are some benefits to Zenmap, such as the topology map, and we are going to showcase that here in this task. 
 
 NMAP is available on all the commmon platforms and you can get it from their [website](https://nmap.org/download), however if you are using Linux, you can most likely get it from your package manager. Go ahead and proceed with the installation, for Linux you might have to install Zenmap package as it usually is not bundled with NMAP. If you are using Windows we recommend leaving everything as default.
 
@@ -101,7 +103,7 @@ To scan your network you are going to need your ip address in CIDR notation, whi
 
 The command ```ip a``` will show your ip address already in CIDR notation, you just have to find the address of the correct device, usually the second from the top as the first will be localhost. 
 
-![ip a on Linux](kuva linkki githubista)
+![ip a on Linux](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Topic/Images/Linux_ip_a.png)
 
 Now make sure to swap the host part; part after the last '.' and before the '/' to a 0. Add the CIDR and this will be the address you will scan.
 
@@ -112,7 +114,7 @@ Now make sure to swap the host part; part after the last '.' and before the '/' 
 
 The command ipconfig will show you your ip address and the subnet mask, with these we will figure out the address you will scan.
 
-![ipconfig on windows](kuva linkki githubista)
+![ipconfig on windows](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Topic/Images/Windows_ipconfig.PNG)
 
 These are the numbers we care about.
 
@@ -145,6 +147,14 @@ The Windows Event viewer logs and shows events of a windows system. Looking thro
 
 The second part is getting to know the event viewer a bit more, we will look through your own logs and learn how to sort through the data and organize it better. 
 
+### Task 4C: Account Security
+
+This last part of task 4 is to check yourself with haveibeenpwned and spiderfoot. These should let you know if your account details have been leaked and what types of information was included.
+
+[Haveibeenpwned](https://haveibeenpwned.com/) Is a website and very simple to use, you input your email address and it will search for leaks on platforms where you have accounts. The website shows you platform it detected had been leaked and those leaks included your email address, however it is not a definitive list and there may be more leaks or dumps with your email included. Take a screenshot for the return.
+
+[Spiderfoot](https://github.com/smicallef/spiderfoot) Is a tool run from the command line with a web GUI. It covers more bases and types of input than just email addresses, we recommend getting to know those, but for this task we are inputting your email address. Spiderfoot can be run in a docker container; after cloning the github repository and navigating into `./spiderfoot`, build the included Dockerfile `docker build -t spiderfoot .` after this you can run spiderfoot with normal operation with the command `docker run -p 5001:5001 spiderfoot`. 
+
 ### Task 4: What to return
 
 **A)**
@@ -164,6 +174,13 @@ Part 2
 1. TODO
 2. TODO
 3. TODO
+
+**C)**
+1. Has your account details leaked?
+2. Screenshot of both haveibeenpwned search and spiderfoot search, you can redact information if you want.
+3. Did you change passwords that were leaked, if not, do it.
+
+---
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
