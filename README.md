@@ -24,15 +24,13 @@ See laboratory and virtual machine instructions over [here.](https://ouspg.org/r
 The course can be passed by completing the questionnaires in the Moodle workspace **(Grade 1)**.  
 These will be released weekly and will handle current course affairs.
 
-> **Note**
-> This is subject to change
-
 Total Points|Total Grade
 :-:|:-:
+<7 | 1
 7+ | 2
-14+ | 3
-20+ | 4
-26+ | 5
+13+ | 3
+19+ | 4
+25+ | 5
 
 ***Maximum points: 28p***
 
