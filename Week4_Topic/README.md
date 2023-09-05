@@ -6,7 +6,7 @@ Task #|Points|Description|
 -----|:---:|----------|
 Task 1 | 1 | Side-channels
 Task 2 | 1 | Slow Loris
-Task 3 | 2 | BurpSuite 
+Task 3 | 2 | BurpSuite & thc-hydra
 
 ---
 
@@ -56,13 +56,14 @@ In this exercise we will take a brief look at a popular web security testing too
 
 **Needed tools:**  
 Virtual Machine (Linux)  
-Firefox with FoxyProxy  
 BurpSuite Community Edition  
 Docker Engine  
 Damn Vulnerable Web Application DVWA  
+thc-hydra
+
 
 **Returnable file**  
-File that you should return will be a PDF that contain clear screenshots of requested tasks and few explanations. This file should be returned to the Moodle return box.  
+File that you should return will be a PDF or a github repository link that contain clear screenshots of requested tasks and few explanations. This file/link should be returned to the Moodle return box.  
 
 ### Installing Burpsuite
 
@@ -85,51 +86,11 @@ For first time setup, follow the steps from "Install using the apt repository" t
 
 ### Setting things up  
 
-#### BurpSuite Proxy  
+#### BurpSuite
 
 Start BurpSuite on your virtual machine. Open a Temporary project and use BurpSuite defaults. You should land on the Dashboard of BurpSuite.  
 
-We need to set the scope and target for BurpSuite proxy, so we only catch traffic that we want to see. Navigate to *Target* Tab and click on *Scope settings*  
-
-![burp4](https://user-images.githubusercontent.com/44393530/225859733-92feb908-625b-4371-8000-ccdf3d53a45a.PNG)
-
-We will host our testing site in *localhost*.  
-
-In Project Scope section, add http://localhost/ to the included scope. End result should look like this  
-
-![burp1](https://user-images.githubusercontent.com/44393530/225859849-4211d1b4-06e7-4bbc-a817-bc737e0a96fc.PNG)
-
-When BurpSuite asks about Proxy history logging of out-of-scope items, click "Yes"  
-
-Under Tools, select the Proxy tab and check that the parts highlighted in red match. Usually you should only need to enable the highlighted Request interception rule. If proxy listener is not set, add a new one for the IP address **127.0.0.1** and bind it to port **8080**  
-
-![burp5](https://user-images.githubusercontent.com/44393530/225860075-625f06c2-713a-4aa3-b5c3-17fe59ef54c7.PNG)  
-
-#### Installing Firefox and FoxyProxy  
-
-In this exercise we will use **Firefox** as our browser. Please install it before proceeding.  
-
-We want Firefox to use the BurpSuite as our proxy, so that we can intercept and modify traffic going trough our browser.  
-
-Install a Firefox plug-in called FoxyProxy from https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/  
-
-![foxyproxy](https://user-images.githubusercontent.com/44393530/225860307-0c4e3db4-7e3a-4e62-8493-809fbbb57fcc.PNG)
-
-Add FoxyProxy to your browser. After that, click on the top right corner to show your extensions and click on FoxyProxy  
-
-![foxyproxy1](https://user-images.githubusercontent.com/44393530/225860395-b03cba99-06c4-445b-a6ce-20c82e22e35d.PNG)
-
-Now you should be here. Click Add to create a new proxy setting.  
-
-![foxyproxy2](https://user-images.githubusercontent.com/44393530/225860456-9317e66b-d55c-458e-8fef-d88085c8848f.PNG)
-
-Add the same settings as you did to the Proxy settings in BurpSuite and click Save.  
-
-![foxyproxy3](https://user-images.githubusercontent.com/44393530/225860523-fb7de636-9d56-4765-b05e-998bb96580e5.PNG)
-
-Now you should be able to turn on the newly created proxy setting from the Firefox extensions. Since we selected our proxy type to be HTTP, you *should not/should not be able to* visit HTTPS sites in this browser while this setting is on.  
-
-![foxyproxy4](https://user-images.githubusercontent.com/44393530/225860692-59104032-e902-492e-93e6-f38c28b87ec6.PNG)
+We will be using the BurpSuite browser for this task. You can open the browser by navigating to the "Target" tab and clicking "Open browser"
 
 #### Running DVWA
 
@@ -137,9 +98,17 @@ Now you should be able to turn on the newly created proxy setting from the Firef
 
 Before proceeding check that your Virtual Machine's networking mode is set to NAT. In VirtualBox it can be checked from network settings in the bottom right corner.   
 
-We installed Docker Engine to streamline the setup of this web application. We can simply run the image by running the following command in terminal  
+We installed Docker Engine to streamline the setup of this web application. You can pull the DVWA docker image by running the following command
+
+>docker pull vulnerables/web-dvwa
+
+We can then simply run the image by running the following command in terminal  
 
 >docker run --rm -it -p 80:80 vulnerables/web-dvwa  
+
+If you get an error about not being able to connect, make sure that the docker daemon is running by opening a second terminal and running the command
+
+>sudo dockerd
 
 If everything was successful, you should be able to access DVWA via http://localhost/  
 
@@ -157,7 +126,7 @@ After this you will be returned to the login page and we can start learning few 
 
 ## **Subtask 1**: Intercepting
 
-Right now we have setup our proxy in a way that all communications between Firefox and localhost goes trough BurpSuite.
+BurpSuite browser is automatically setup as a proxy for BurpSuite and we are able to intercept the traffic going trough it.
 
 Open the Proxy tab in BurpSuite and go to HTTP history. If you followed the instructions, there should be already some GET and POST requests visible. You can create more by attempting to login with wrong credentials. Here is a captured example with username=admin and password=hello  
 
@@ -264,11 +233,7 @@ Finally use the **Smart Decode** function. Return a screenshot of all the encode
 
 After getting your results you can close BurpSuite. Remember, that the BurpSuite project is temporary and you cannot access the results after closing.  
 
-Go to Firefox and Turn off FoxyProxy  
-
-![foxyproxyquit](https://user-images.githubusercontent.com/44393530/225862992-7d1ecb1f-7fbd-4b35-a4d6-24ba16070095.PNG)
-
-To close the docker image of DVMA, open the terminal window where docker is active and press **Ctrl+C**. This should close the image. You can verify this with the command  
+To close the docker image of DVMA, open the terminal window where docker is active and press **Ctrl+C**. This should close the image. You can also close the docker daemon with the same key combination. You can verify this with the command  
 
 >docker info  
 
