@@ -82,7 +82,7 @@ You don't have to contain yourself to just text, you may include for example pic
 
 ### Task 4: Security Audit
 
-In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data.
+In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data. We also deploy a Security Information and Event Management software to monitor and analyze systems.
 
 ### Task 4A: Network scan 
 
@@ -124,63 +124,61 @@ Now make sure to swap the host part of your ip address; part after the last '.' 
 
 </details>
 
-<details>
-<summary>Mac</summary>
-
-**TODO**
-
-</details>
-
 Now that we have the address we want to scan, open up Zenmap. The UI is mostly self-explanatory, put the ip address in CIDR notation to the target and choose intense scan for the profile, then just press scan. This should scan the devices in your network. While the scan is running, you can see the output the same way as in NMAP, wait for it to finish and comb through the output. Take note of open ports, scripts and operating systems the scan found.
 
 Make your way over to the topology tab. Enable easy controls with the control button on the left. Here you should now see all the devices found, icon definitions can be seen after clicking the 'Legend' button on the right, and more info on the devices can be found by right clicking.
 
 Save the scan with ```CTRL + S``` and take a screenshot of this topology screen with devices clearly visible, you can redact device information from the screenshot if you want to. 
 
->The topology map can show traceroutes when scanning outside your network, this is where the tool shines as a simple visual aid.
+>The topology map can show traceroutes when scanning outside your network, this is where the tool shines as a simple visual aid. 
 
-### Task 4B: Event Viewer
-
-The Windows Event viewer logs and shows events of a windows system. Looking through the event viewer for the first time may look a bit daunting and it contains a lot of information about your system. In this task we are first using it to look through an .evtx file(A saved event viewer log file). The file has logged malicious events and your task is figuring out what has happened. 
-
-**The .evtx file is TBD**
-
-The second part is getting to know the event viewer a bit more, we will look through your own logs and learn how to sort through the data and organize it better. 
-
-### Task 4C: Account Security
-
-This last part of task 4 is to check yourself with haveibeenpwned and spiderfoot. These should let you know if your account details have been leaked and what types of information was included.
-
-[Haveibeenpwned](https://haveibeenpwned.com/) Is a website and very simple to use, you input your email address and it will search for leaks on platforms where you have accounts. The website shows you platform it detected had been leaked and those leaks included your email address, however it is not a definitive list and there may be more leaks or dumps with your email included. Take a screenshot for the return.
-
-[Spiderfoot](https://github.com/smicallef/spiderfoot) Is a tool run from the command line with a web GUI. It covers more bases and types of input than just email addresses, we recommend getting to know those, but for this task we are inputting your email address. Spiderfoot can be run in a docker container; after cloning the github repository and navigating into `./spiderfoot`, build the included Dockerfile `docker build -t spiderfoot .` after this you can run spiderfoot with normal operation with the command `docker run -p 5001:5001 spiderfoot`. 
-
-### Task 4: What to return
-
-**A)**
+**What to return:**
 1. Did you find devices you did not know were in your network?
 2. Were there open ports which should have been closed?
 3. Did nmap find any vulnerabilities with the scripts?
 4. Screenshot of the topology of your network. You can redact device information if you want.
 
-**B)**
+### Task 4B: Account Security
 
-Part 1
-1. What has happened, write in your own words.
-2. Which [MITRE ATT&CK Matrix](https://attack.mitre.org/) area does it fit?
-3. Is there a name for this attack, if yes, what?
+This last part of task 4 is to check yourself with haveibeenpwned. This should let you know if your account details have been leaked and what types of information was included.
 
-Part 2
-1. TODO
-2. TODO
-3. TODO
+[Haveibeenpwned](https://haveibeenpwned.com/) Is a website and very simple to use, you input your email address and it will search for leaks on platforms where you have accounts. The website shows you platform it detected had been leaked and those leaks included your email address, however it is not a definitive list and there may be more leaks or dumps with your email included. Take a screenshot for the return. 
 
-**C)**
+Research how to include haveibeenpwned into a registration form.
+
+**What to return:**
 1. Has your account details leaked?
 2. Screenshot of both haveibeenpwned search and spiderfoot search, you can redact information if you want.
 3. Did you change passwords that were leaked, if not, do it.
 
----
+### Task 4C: [Wazuh](https://www.wazuh.com)
+
+Wazuh is an free and open source "unified XDR and SIEM protection for endpoints and cloud workloads." In this task we are going to focus more on the [SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem) side of things. Take a look at their [website](https://wazuh.com/platform/siem/) and [github](https://github.com/wazuh/wazuh) to familiarize yourself with the capabilities and features Wazuh SIEM offers.
+
+>**Note**
+>Task has been written on Version 4.5, when going through documentation, you can switch to Version 4.5 from the top-left.
+
+Start of with deploying the Wazuh [single-node on Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html). You should go through the documentation to understand what's going on, but the following commands should be enough:
+
+```console
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.5.1
+cd wazuh-docker/single-node
+docker-compose -f generate-indexer-certs.yml run --rm generator
+docker-compose up -d
+```
+
+Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your interal ip address. This step should be straightforward.
+
+Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on both agents, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
+
+You are to trigger the FIM with atleast two different events. Then answer the questions below.
+
+**What to return:**
+1. What rule descriptions did you get?
+2. What are the MITRE ATT&CK techniques(include ID) Wazuh reports for these events?
+3. What is the reported MITRE techniques for deleting files or directories inside monitored directories?
+4. Explain in your own words where, when and why should these systems be used.
+5. Add a screenshot of your integrity monitoring events tab.
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
