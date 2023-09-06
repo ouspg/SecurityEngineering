@@ -103,7 +103,7 @@ To scan your network you are going to need your ip address in CIDR notation, whi
 
 The command ```ip a``` will show your ip address already in CIDR notation, you just have to find the address of the correct device, usually the second from the top as the first will be localhost. 
 
-![ip a on Linux](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Topic/Images/Linux_ip_a.png)
+![ip a on Linux](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Threats/Images/Linux_ip_a.png)
 
 Now make sure to swap the host part; part after the last '.' and before the '/' to a 0. Add the CIDR and this will be the address you will scan.
 
@@ -114,7 +114,7 @@ Now make sure to swap the host part; part after the last '.' and before the '/' 
 
 The command ipconfig will show you your ip address and the subnet mask, with these we will figure out the address you will scan.
 
-![ipconfig on windows](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Topic/Images/Windows_ipconfig.PNG)
+![ipconfig on windows](https://github.com/ouspg/SecurityEngineering/blob/main/Week1_Threats/Images/Windows_ipconfig.PNG)
 
 These are the numbers we care about.
 
@@ -140,16 +140,14 @@ Save the scan with ```CTRL + S``` and take a screenshot of this topology screen 
 
 ### Task 4B: Account Security
 
-This last part of task 4 is to check yourself with haveibeenpwned. This should let you know if your account details have been leaked and what types of information was included.
+This part of task 4 is to check yourself with haveibeenpwned. This should let you know if your account details have been leaked and what types of information was included.
 
-[Haveibeenpwned](https://haveibeenpwned.com/) Is a website and very simple to use, you input your email address and it will search for leaks on platforms where you have accounts. The website shows you platform it detected had been leaked and those leaks included your email address, however it is not a definitive list and there may be more leaks or dumps with your email included. Take a screenshot for the return. 
-
-Research how to include haveibeenpwned into a registration form.
+[Haveibeenpwned](https://haveibeenpwned.com/) Is a website and very simple to use, you input your email address and it will search for leaks on platforms where you have accounts. The website shows you platforms it detected had been leaked and those leaks included your email address, however it is not a definitive list and there may be more leaks or dumps with your email included. Take a screenshot for the return. 
 
 **What to return:**
 1. Has your account details leaked?
-2. Screenshot of both haveibeenpwned search and spiderfoot search, you can redact information if you want.
-3. Did you change passwords that were leaked, if not, do it.
+2. Screenshot of haveibeenpwned search, you can redact information if you want.
+3. Did you change passwords and/or email + password combos, that were leaked, if not, do it.
 
 ### Task 4C: [Wazuh](https://www.wazuh.com)
 
@@ -167,7 +165,7 @@ docker-compose -f generate-indexer-certs.yml run --rm generator
 docker-compose up -d
 ```
 
-Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your interal ip address. This step should be straightforward.
+Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your internal ip address. This step should be straightforward.
 
 Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on both agents, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
 
