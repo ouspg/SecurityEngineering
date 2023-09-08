@@ -54,8 +54,7 @@ We also recommend creating a visual representation of your threat model, diagram
 ---
 
 ### Task 3: Company Security Policy
-Pick topics from the list below to write a security policy on.
-You can choose to write policies for two topics for 2 points or write one policy for 1 point.
+Pick two topics from the list below to write a security policy on.
 An effort should be made to include one policy on one A4 page. 
 
 <details>
@@ -73,7 +72,7 @@ An effort should be made to include one policy on one A4 page.
 
 </details>
 
-These policies are to be kept quite straight-forward and easily understandable for any employee, this includes explaining certain not well-known words, for example a VPN or a network perimeter. The second lecture "Threat Models and Security Policies" gives very good advice on how to write a sensible policy.
+These policies are to be kept quite straight-forward and easily understandable for any employee, this includes explaining certain not well-known topics, for example a VPN or a network perimeter. The second lecture "Threat Models and Security Policies" gives very good advice on how to write sensible policies.
 
 You should also check [this](https://csrc.nist.rip/publications/nistpubs/800-12/800-12-html/chapter5.html) for detailed advice and explanation on for example types of policies. For example chapter 5.2.2 gives good insight on what basic components are good for issue-specific policies.
 You don't have to contain yourself to just text, you may include for example pictures and data-flow charts where beneficial.
