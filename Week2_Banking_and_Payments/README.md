@@ -7,7 +7,8 @@ Task #|Points|Description|
 Task 1 | 1 | Browsers and Banking Security ***or*** Certifcates
 Task 2 | 1 | Cards and Payments
 Task 3 | 1 | Card Fraud
-Task 4 | 1 | Subdomain Takeover ***or*** Non-technical Alternative 
+Task 4 | 1 | Non-technical Alternative 
+Task 4 | 2 | Subdomain Takeover 
 
 ---
 
