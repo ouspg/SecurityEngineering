@@ -1,0 +1,10 @@
+entryPoints:
+  web:
+    address: :80
+providers:
+  file:
+    directory: /etc/traefik
+    filename: routes.yml
+  http:
+    endpoint: "http://command/targets"
+    pollInterval: "5s"
