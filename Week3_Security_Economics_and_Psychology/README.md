@@ -12,7 +12,7 @@ Task 3B | 1 | Freedom of Information
 
 # Tasks
 
-### Task 1: Technological Lock-in
+### Task 1: Lock-ins
 
 In this week's course material, you might have heard about concept of lock-ins, often differentiated into **technological** and **vendor lock-ins**. Provide a brief summary of each type of lock-in. Feel free to share any personal insights you may have regarding your own experiences with these lock-ins. Additionally, discuss the potential costs associated with breaking free from these lock-ins and the advantages and disadvantages of remaining within them.
 
@@ -36,7 +36,7 @@ no strict length requirements, but aim for 100+ words per question.
 
 ## Task 3:
 
-### Task3A:
+### Task3A: Intellectual Rights
 
 Companies prioritize safeguarding their assets, encompassing both tangible and intangible aspects. This protection involves utilizing legal mechanisms like: 
 
@@ -54,3 +54,7 @@ along with employing technologies such as:
 - software protection dongles
 
 Please provide a brief explanation of each mentioned safeguarding method and cite any known use cases for each.
+
+### Task3B: Freedom of Information
+
+Other side of the coin, information wants to be free. Pick 2 safeguarding methods from previous part and Investigate and present real-world instances where the aforementioned safeguarding methods were bypassed, highlighting entities involved and the rationale behind their actions. Additionally, report on how they justify these circumventions. Answer in 400-500 word essay.
