@@ -26,7 +26,7 @@ Choose an example of a side-channel attack and explain the following information
 
 - Has it been fixed? If yes, how it was fixed?
 
-List sources and keep the answer concise at max 300 words not including sources.
+This time, You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources.
 
 ---
 
@@ -46,7 +46,7 @@ Seek information about the Slowloris Denial-of-Service attack and answer to the 
 
 - Are there any notable instances of this style of attack being performed?
 
-List sources and keep the answer concise at max 300 words not including sources
+This time, You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources
 
 ---
 
