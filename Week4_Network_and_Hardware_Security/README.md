@@ -277,7 +277,7 @@ With hydra, we will target the Brute Force section of DVWA.
 
 We will craft a command that will brute force the password 'cc' that we just entered.
 
->docker run --network="host" vanhauser/hydra -V -f -I -l admin -x 1:2:a 'YOUR-ANSWER-HERE://localhost/vulnerabilities/brute/:YOUR-ANSWER-HERE=^USER^&YOUR-ANSWER-HERE=^PASS^&Login=Login:H=Cookie\:PHPSESSID=YOUR-ANSWER-HERE; security=low:F=YOUR-ANSWER-HERE'
+>docker run --network="host" vanhauser/hydra -V -f -I -l admin -x 1:2:a "YOUR-ANSWER-HERE://localhost/vulnerabilities/brute/:YOUR-ANSWER-HERE=^USER^&YOUR-ANSWER-HERE=^PASS^&Login=Login:H=Cookie\:PHPSESSID=YOUR-ANSWER-HERE; security=low:F=YOUR-ANSWER-HERE"
 
 You will replace the YOUR-ANSWER-HERE sections with information you gather by inspecting the Brute Force tab with BurpSuite
 
@@ -309,7 +309,7 @@ Flags/Parameters
 
 Tells hydra to brute force the password. This is a special case, as hydra normally uses wordlists. '1:2:a' is a syntax for 'MIN:MAX:CHARSET'. This means hydra will start by bruteforcing with password length 1 and end after it has tested all combinations with the lenght of 2. CHARSET tells what kind of characters to test. Lowercase 'a' means only lowercase characters will be used to create the combinations.
 
->'YOUR-ANSWER-HERE://localhost/vulnerabilities/brute/:
+>"YOUR-ANSWER-HERE://localhost/vulnerabilities/brute/:
 
 Describes the HTTP method and target site. Here you will replace YOUR-ANSWER-HERE with either *http-post-form* or *http-get-form*. Use BurpSuite to figure out the correct method.
 
@@ -321,7 +321,7 @@ This is important as ^USER^ and ^PASS^ are microsyntax for hydra to know which q
 
 Information as required by the HTTP request. The important part here is the PHP session ID which is unique each time you run the DVWA. Find this using BurpSuite and fill it in. Also make sure DVWA security level is set to 'Low'.
 
->F=YOUR-ANSWER-HERE'
+>F=YOUR-ANSWER-HERE"
 
 Sets the Failure state for Hydra. Hydra does not know when the login attempt is either successful or has failed. YOUR-ANSWER-HERE will be a string of characters that appear on the website after a failed login attempt. Hydra will look for this string of characters after each attempt and continue if it can find it.
 
