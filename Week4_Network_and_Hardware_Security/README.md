@@ -105,7 +105,7 @@ Download and follow the installer
 
 #### BurpSuite
 
-Start BurpSuite on your virtual machine. Open a Temporary project and use BurpSuite defaults. You should land on the Dashboard of BurpSuite.  
+Start BurpSuite on your machine. Open a Temporary project and use BurpSuite defaults. You should land on the Dashboard of BurpSuite.  
 
 We will be using the BurpSuite browser for this task. You can open the browser by navigating to the "Target" tab and clicking "Open browser"
 
