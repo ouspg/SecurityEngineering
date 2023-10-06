@@ -138,6 +138,8 @@ Write a summary (max 800 words) on "Evolution of card fraud" in which you answer
 
 ### Task 4: Subdomain Takeover
 
+**If doing technical task, do only subtask 1 and 2, and one essay of the non-technical task**
+
 Practising use of browser developer tools and Python by playing out an example scenario of subdomain takeover on a simple Banking application.
 
 ## Pretask
