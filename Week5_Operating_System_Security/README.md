@@ -60,15 +60,15 @@ Make short write up about each that answers following questions
 Log files are records of events or actions that occur in a system, application, or program. Logs are essential for troubleshooting, debugging, and analyzing the behavior of software or hardware.
 
 Find answers to following questions:
-1.What kind of information would be saved into following types of log files
+1. What kind of information would be saved into following types of log files
 - Application logs
 - Event logs
 - Service logs
 - System logs
 
-2.Where in each of the common Operating Systems those logs would be stored (Windows, Mac, Linux(changes per distro so provide in answer wich you are using)
-3.What kind of threads you could you notice by monitoring each log file?
-4.How would you go about monitoring logs on your personal computer?
+2. Where in each of the common Operating Systems those logs would be stored (Windows, Mac, Linux(changes per distro so provide in answer which you are using)
+3. What kind of threads you could you notice by monitoring each log file?
+4. How would you go about monitoring logs on your personal computer?
 
 
 remember to list sources for information you use!
