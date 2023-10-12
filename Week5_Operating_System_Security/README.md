@@ -67,7 +67,7 @@ Find answers to following questions:
 - System logs
 
 2. Where in each of the common Operating Systems those logs would be stored (Windows, Mac, Linux(changes per distro so provide in answer which you are using)
-3. What kind of threads you could you notice by monitoring each log file?
+3. What kind of threats could you notice by monitoring each log file?
 4. How would you go about monitoring logs on your personal computer?
 
 
