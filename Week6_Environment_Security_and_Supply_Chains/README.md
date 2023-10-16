@@ -160,7 +160,7 @@ Your goal here is to choose the rules, start the tool and trigger alerts about a
 
 However you are to trigger another alert from within the containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
 
-> `docker run -it <image_name> sh` can be used to start an interactive shell in a container. You can use any shell you want, like bash, but not every distribution, or container has it.
+> `docker run -it <image_name> /bin/sh` can be used to start an interactive shell in a container. You can use any shell you want, like bash, but not every distribution, or container has it.
 
 You can modify the rules provided with the installation, most likely not necessary, however it is encouraged to take look at least.
 
