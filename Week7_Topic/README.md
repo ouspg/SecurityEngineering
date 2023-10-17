@@ -79,6 +79,9 @@ FI: https://tietoturvamerkki.fi/fi/tietoturvamerkki-etusivu
 
 EN: https://tietoturvamerkki.fi/en/cybersecurity-label 
 
+
+---
+
 ### Task 5: Showcase
 
 Choose a Cybersecurity tool of your choice and answer the following questions about it.
@@ -91,7 +94,7 @@ Pick a new tool that has not been featured in the course, so the following are f
 - When was the tool created and by who?
 - Is the tool Open Source?
 - What is the tool used for?
-- Who would most benefit from this tool?
 - What are its capabilities?
+- Who would most benefit from this tool?
 - What kind of use case could you yourself have for this tool?
 
