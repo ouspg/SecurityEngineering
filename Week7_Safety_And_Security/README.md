@@ -6,7 +6,7 @@ Task #|Points|Description|
 -----|:---:|----------|
 Task 1 | 1 | Safety Concerns
 Task 2 | 1 | Static and Dynamic Analysers 
-Task 3 | 1 | Security Cerftifications
+Task 3 | 1 | Security Certifications
 Task 4 | 1 | Tietoturvamerkki
 Task 5 | 1 | Showcase
 
