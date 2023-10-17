@@ -8,6 +8,9 @@ Task 1 | 1 | Safety Concerns
 Task 2 | 1 | Static and Dynamic Analysers 
 Task 3 | 1 | Security Cerftifications
 Task 4 | 1 | Tietoturvamerkki
+Task 5 | 1 | Showcase
+
+(4 points max)
 
 ---
 
@@ -20,7 +23,7 @@ In terms of medical equipment and automotive industry mentioned in the Lecture 1
 - Why are new safety concerns sometimes overlooked? 
 - What are events that trigger sudden change? 
 
-300 words **maximum**, cite if you use external sources 
+250 words **maximum**, cite if you use external sources 
 
 [Security Engineering Lecture 13: Safety and Security](https://www.youtube.com/watch?v=uZkQtnHKcJ4) 
 
@@ -44,7 +47,7 @@ Consider the different incentives (both 'Good' and 'Bad' incentives) for Securit
 - Certifying authority (both vendor funded and non-profit) 
 - Manufacturer/designer of the product 
 
-500 words **maximum**, cite if you use external sources 
+400 words **maximum**, cite if you use external sources 
 
 **(EXPLANATIONS)**
 
@@ -69,11 +72,26 @@ Take a look at Tietoturvamerkki and write an essay answering the following quest
 - What does the certificate guarantee about the product and what it does not 
 - Include your own thoughts about this style of certificate. Would you pay more for a certified product? Do you see any problems regarding the certificate? 
 
-500 words **maximum**. 
-
+400 words **maximum**. 
  
 
 FI: https://tietoturvamerkki.fi/fi/tietoturvamerkki-etusivu 
 
 EN: https://tietoturvamerkki.fi/en/cybersecurity-label 
+
+### Task 5: Showcase
+
+Choose a Cybersecurity tool of your choice and answer the following questions about it.
+
+Pick a new tool that has not been featured in the course, so the following are forbidden from this task: (Nmap/Zenmap, Wazuh, thc-hydra, BurpSuite, Trivy, Hadolint, Falco)
+
+- Name of the tool
+- Link to the tool homesite/repository
+- Free or Paid tool?
+- When was the tool created and by who?
+- Is the tool Open Source?
+- What is the tool used for?
+- Who would most benefit from this tool?
+- What are its capabilities?
+- What kind of use case could you yourself have for this tool?
 
