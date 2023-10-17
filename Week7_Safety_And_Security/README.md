@@ -89,7 +89,7 @@ Choose a Cybersecurity tool of your choice and answer the following questions ab
 Pick a new tool that has not been featured in the course, so the following are forbidden from this task: (Nmap/Zenmap, Wazuh, thc-hydra, BurpSuite, Trivy, Hadolint, Falco)
 
 - Name of the tool
-- Link to the tool homesite/repository
+- Link to the tool website/repository
 - Free or Paid tool?
 - When was the tool created and by who?
 - Is the tool Open Source?
