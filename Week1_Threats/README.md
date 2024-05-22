@@ -25,6 +25,8 @@ Please keep your answer concise, but at **minimum** 150 words.
 
 ### Task 2: Personal Threat Model
 
+Possible tool to add to next run [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)
+
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
 In this task we are focusing solely on the cyber side of threat models as you will be creating a personal threat model to identify and assess potential threats to your assets, for example sensitive information and online accounts.
