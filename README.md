@@ -13,6 +13,8 @@ The course includes practical exercises for seven weeks on the previously mentio
 In general, you are not required to complete technically challenging tasks to acquire grade 3, but beyond that technical skills might be required.
 So be prepared!
 
+First practical exercise sessions will have a focus on setting up the OUSPG VM environment with docker and/or podman, etc...
+
 The course will use GitHub Classroom for returning the work.
 See general instructions [here.](https://ouspg.org/resources/github/)
 
