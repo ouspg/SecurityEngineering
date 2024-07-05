@@ -4,10 +4,10 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Bring Your Own Device
-Task 2 | 1 | Attacks on CPU Execution
-Task 3 | 1 | Securing OS
-Task 4 | 1 | Logging 
+[Task 1](#task1-bring-your-own-devices) | 1 | Bring Your Own Device
+[Task 2](#task2-attacks-on-cpu-execution) | 1 | Attacks on CPU Execution
+[Task 3](#task3-securing-os) | 1 | Securing OS
+[Task 4](#task4-logging) | 1 | Logging 
 
 ---
 

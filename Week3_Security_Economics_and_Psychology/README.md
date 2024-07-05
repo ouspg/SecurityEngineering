@@ -4,10 +4,10 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Lock-ins
-Task 2 | 1 | Security Psychology
-Task 3A | 1 | Intellectual Rights
-Task 3B | 1 | Freedom of Information
+[Task 1](#task-1-lock-ins) | 1 | Lock-ins
+[Task 2](#task2-security-psychology) | 1 | Security Psychology
+[Task 3A](#task-3) | 1 | Intellectual Rights
+[Task 3B](#task-3) | 1 | Freedom of Information
 ---
 
 # Tasks

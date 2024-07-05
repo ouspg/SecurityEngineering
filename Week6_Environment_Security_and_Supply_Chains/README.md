@@ -4,9 +4,9 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Secure Running Environment
-Task 2 | 1 | Supply Chain Attacks 
-Task 3 | 2 | Securing docker
+[Task 1](#task-1-secure-running-environment) | 1 | Secure Running Environment
+[Task 2](#task-2-supply-chain-attacks) | 1 | Supply Chain Attacks 
+[Task 3](#task-3-securing-docker) | 2 | Securing docker
 
 ---
 

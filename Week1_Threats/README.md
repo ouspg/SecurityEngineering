@@ -4,10 +4,10 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Measures Against Cyber Crimes
-Task 2 | 1 | Personal Threat Model
-Task 3 | 1 | Company Security Policy
-Task 4 | 1 | Security Audit
+[Task 1](#task-1-what-measures-have-you-taken-to-protect-yourself-from-cyber-crimes) | 1 | Measures Against Cyber Crimes
+[Task 2](#task-2-personal-threat-model) | 1 | Personal Threat Model
+[Task 3](#task-3-company-security-policy) | 1 | Company Security Policy
+[Task 4](#task-4-security-audit) | 1 | Security Audit
 
 ---
 

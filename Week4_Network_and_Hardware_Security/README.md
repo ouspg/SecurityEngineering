@@ -4,9 +4,9 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Side-channels
-Task 2 | 1 | Slow Loris
-Task 3 | 2 | BurpSuite & thc-hydra
+[Task 1](#task-1-side-channels) | 1 | Side-channels
+[Task 2](#task-2-slow-loris) | 1 | Slow Loris
+[Task 3](#task-3-burpsuite-introduction) | 2 | BurpSuite & thc-hydra
 
 ---
 

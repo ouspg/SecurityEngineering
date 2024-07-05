@@ -4,11 +4,11 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Browsers and Banking Security ***or*** Certifcates
-Task 2 | 1 | Cards and Payments
-Task 3 | 1 | Card Fraud
-Task 4 | 1 | Non-technical Alternative 
-Task 4 | 2 | Subdomain Takeover 
+[Task 1](#task-1-choose-a-or-b) | 1 | Browsers and Banking Security ***or*** Certifcates
+[Task 2](#task-2-cards-and-payments) | 1 | Cards and Payments
+[Task 3](#task-3-card-fraud) | 1 | Card Fraud
+[Task 4](#task-4-non-technical-alternative) | 1 | Non-technical Alternative 
+[Task 4](#task-4-subdomain-takeover) | 2 | Subdomain Takeover 
 
 ---
 

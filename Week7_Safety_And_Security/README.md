@@ -4,11 +4,11 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-Task 1 | 1 | Safety Concerns
-Task 2 | 1 | Static and Dynamic Analysers 
-Task 3 | 1 | Security Certifications
-Task 4 | 1 | Tietoturvamerkki
-Task 5 | 1 | Showcase
+[Task 1](#task-1-safety-concerns) | 1 | Safety Concerns
+[Task 2](#task-2-static-and-dynamic-analyzers) | 1 | Static and Dynamic Analysers 
+[Task 3](#task-3-security-certification) | 1 | Security Certifications
+[Task 4](#task-4-tietoturvamerkki) | 1 | Tietoturvamerkki
+[Task 5](#task-5-showcase) | 1 | Showcase
 
 (4 points max)
 
