@@ -7,8 +7,7 @@ Task #|Points|Description|
 [Task 1](#task-1-choose-a-or-b) | 1 | Browsers and Banking Security ***or*** Certifcates
 [Task 2](#task-2-cards-and-payments) | 1 | Cards and Payments
 [Task 3](#task-3-card-fraud) | 1 | Card Fraud
-[Task 4](#task-4-non-technical-alternative) | 1 | Non-technical Alternative 
-[Task 4](#task-4-subdomain-takeover) | 2 | Subdomain Takeover 
+[Task 4](#task-4-wazuh) | ~~2~~ | SIEM Wazuh **check grading on this**
 
 ---
 
@@ -134,273 +133,48 @@ Write a summary (max 800 words) on "Evolution of card fraud" in which you answer
 
 ---
 
-## Task 4: Subdomain Takeover ***or*** Non-Technical Alternative
-
-### Task 4: Subdomain Takeover
-
-**If doing technical task, do only subtask 1 and 2, and one essay of the non-technical task**
-
-Practising use of browser developer tools and Python by playing out an example scenario of subdomain takeover on a simple Banking application.
-
-## Pretask
-
-Summarize in a few sentences what is a subdomain takeover?
-
-- https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/10-Test_for_Subdomain_Takeover
-- https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers
-
-```
-
-
-```
-
-## Requirements
-
-This task requires `docker`.
-
-## Summary
-
-You have been tasked to test a new banking application developed by an intern at OUSPG which is riddled with bugs and flaws
-in software design. In this exercise we will mainly look over the most obvious flaws in the application and focus on
-subdomain takeover.
-
-During development the application was created with a microservice architecture in mind and was originally deployed to
-an application platform hosted by a hosting provider. However, later in development the service was moved to run on its
-own servers and most of the microservice components were retired.
-
-In this task you will get to familiarize yourself on how a subdomain takeover could happen and what effects it could
-have. You will get to inspect a very simple web application and figure out how it works. You will also need to write
-your own simple web server to receive data.
-
-Completing this exercise will help you familiarize yourself with your browsers developer tools and Python programming.
-
-## Task
-
-To get started run `docker compose up` and follow the next few steps:
-
-1. Open your browser to http://bank.ouspg.org.localhost:8080/
-    - You should now see a screen with option `login` and `register`
-    - Register a user to the site (for example `a` and `a`)
-2. You should now be in the home screen again with a view of your balance and an option to send money.
-3. Now logout from the application.
-
-As this is all running locally, the subdomain takeover is not done by inspecting DNS, but rather analyzing faults within
-the website itself.
-
-#### Subdomain Takeover
-
-Open up the [home page](http://bank.ouspg.org.localhost:8080/) again and the developer tools of your browser
-(alt + f12).
-
-__Task 1:__ Find out what the application does when you log in
-
-- What methods get called and where?
-    - _See the network tab of your browser's developer tools as well as the console_
-- What data gets saved?
-    - _See the storage tab of your browser's developer tools_
-- Is any data sent to external services?
-    - _You can inspect the request headers and body via developer tools_
-- Is there anything hazardous about the login process?
-
-```
-
-
-```
-
-__Task 2:__ Figure out which subdomain of the application is vulnerable to takeover
-
-- How did you figure out the domain?
-- How can you find out the hosting provider after finding out the domain?
-
-```
-
-
-```
-
-<details>
-    <summary>Hints</summary>
-
-Try and see if any response in the network tab differs from the others.
-Then try and navigate to that address while keeping an eye on your developer tools.
-Inspect any responses you receive while investigating the domains.
-
-</details>
-
-__Task 3:__ Taking over the domain
-
-Now that you found the target domain and the hosting provider, make an assumption that the subdomain was running in the
-app engine of the provider. We will be simulating a small cloud provider which handles their ipv4 allocation by simply
-provisioning them via roundrobin for any servers joining their app platform.
-
-- Visit the imaginary cloud provider management portal at http://hosting-provider.org.localhost:8080/servers/docs
-- Try out the functionality of the API portal and try to get the IP of the target subdomain under your control
-    - You can see this by monitoring the target subdomain for a change in response
-
-In this case the IP range is very small, and you can perform this task manually. However, in any real scenario the pool
-of ip addresses would be big enough to warrant automation. Create a script to automatically provision servers until you
-get the desired domain by utilizing the underlying API of the management portal:
-
-```
-
-
-```
-
-<details>
-    <summary>Hints</summary>
-
-You can look at the _Network_ tab of you browsers developer tools while using the management page.
-See any requests and their content when you click buttons on the page.
-You can also use the inspect feature on most browsers and look into the page source.
-
-For the script, you can use the `requests` library in python:
-
-```python
-import requests as r
-
-r.post('http://my-server/my-path', json={
-    'data': 'value'
-})
-```
-
-</details>
-
-__Task 4:__ Hijacking data
-
-Your task is to create an application that collects users that log in to the application and hijacks their session if
-they navigate to your subdomain page.
-
-If you have trouble receiving the login callback data from the banking application, familiarize yourself with
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) and make required adjustments.
-
-Test your application by creating another user in the banking application and by navigating to your site.
-You should be able to transfer all their money to your account.
-You should also be able to receive callbacks from the banking application when users log in.
-
-Place your code in the [create_your_server.py](create_your_server.py) file.
-
-<details>
-    <summary>Hints</summary>
-
-Try and inspect the banking application and see what data it sends during login.
-Also, inspect what data you possibly want to get from users when they land on your page.
-
-You can take inspiration from [analytics.py](analytics.py)
-
-You can use the provided script and add endpoints as follows:
-
-```python
-from fastapi import FastAPI, Request, Response, Cookie
-from pydantic import BaseModel
-
-app = FastAPI()
-
-
-class MyAPIModel(BaseModel):
-    value: str
-
-
-@app.options('/')
-def my_function(request: Request, response: Response):
-    ...
-
-
-@app.get('/')
-def my_function(cookie_value: Cookie(alias='my-cookie')):
-    return {
-        'my-data': 'is-json'
-    }
-
-
-@app.post('/')
-def my_function(model: MyAPIModel):
-    ...
-
-```
-
-You can see the intro for [FastAPI](https://fastapi.tiangolo.com/tutorial/) for more guidance.
-
-</details>
-
-To finish off run `docker compose down -v` to delete any residual volumes.
-
-__Task 5:__ Questions
-
-- Now you were able to take over the user session. Imagine a situation where you would only get the
-  callback when they log in. Why would even this information be useful for attackers?
-
-```
-
-
-```
-
-- How can subdomain takeovers be prevented?
-
-```
-
-
-```
-
-- What additional protections could an organization do to prevent abuse even if a subdomain takeover occurs?
-
-```
-
-
-```
-
-## Additional Questions
-
-Normally you could do subdomain recon via DNS queries to find domains that exist, but do not lead anywhere.
-
-- Does the tool `nmap` have any useful scripts or plugins to find out (un)used subdomains for a site?
-- What kind of arguments would you use to find subdomains for `example.com`?
-- Are there any other tools or services to find out subdomains for a server?
-
-```
-
-
-```
-
-Additionally, some good resources for domain discovery are __Passive DNS__  and __Certificate Transparency Logs__.
-Research online what are they and how could you utilize them for subdomain takeover and summarize it in a few sentences:
-
-```
-
-
-```
-
-A way to find out the hosting provider for a site is by seeing if it has a `PTR` record automatically configured by the
-hosting provider in DNS.
-
-What is a `PTR` Record?
-
-```
-
-
-```
-
-Only looking at DNS data, can you tell who hosts the domain `ouspg.org`
-
-```
-
-
-```
-
-(Optional) Take a look at the code for the [banking application](bank.py) and find out at least three major points where the
-development has gone terribly wrong. Summarize in a few sentences to what type of attacks could the application be
-vulnerable to or what major security flaws it has:
-
-```
-
-
-```
+### Task 4: [Wazuh](https://www.wazuh.com)
 
 ---
 
-### Task 4: Non-Technical Alternative
+**TODO** Update late august before course to recent version
 
-If you cannot complete the technical exercises you can alternatively complete all of:
+---
 
-Task 1.A and Task 1.B
-- Write further analysis on the effects of PSD2 on payment security for Task 3 (max 250 words)
-- Write a short (max 500 words) analysis on the effects of emerging AI-technologies on online banking frauds and biometric authentication with at least two examples where it has already been used in frauds or other criminal activities.
-- Summarize what is subdomain takeover and what measures can an organization take to protect itself from it (max 250 words)
+Wazuh is an free and open source "unified XDR and SIEM protection for endpoints and cloud workloads." In this task we are going to focus more on the [SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem) side of things. Take a look at their [website](https://wazuh.com/platform/siem/) and [github](https://github.com/wazuh/wazuh) to familiarize yourself with the capabilities and features Wazuh SIEM offers.
+
+>**Note**
+>Task has been written on Version 4.5, when going through documentation, you can switch to Version 4.5 from the top-left.
+
+Start of with deploying the Wazuh [single-node on Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html). You should go through the documentation to understand what's going on, but the following commands should be enough:
+
+```console
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.5.1
+cd wazuh-docker/single-node
+docker-compose -f generate-indexer-certs.yml run --rm generator
+docker-compose up -d
+```
+
+You can access the Wazuh (WUI)WebUI at your localhost, to do this go to [https://localhost](https://localhost). By default Wazuh uses self signed certs and you won't be directed to the site directly, instead click the advanced tab and find the button for "Accept the risk and continue". This will direct you to the site, and from then on you should be able to use it normally.
+
+Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your internal ip address. This step should be straightforward.
+
+Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on both agents, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
+
+You are to trigger the FIM with atleast two different events. Then answer the questions below.
+
+**What to return:**
+1. What rule descriptions did you get?
+2. What are the MITRE ATT&CK techniques(include ID) Wazuh reports for these events?
+3. What is the reported MITRE techniques for deleting files or directories inside monitored directories?
+4. Explain in your own words where, when and why should these systems be used.
+5. Add a screenshot of your integrity monitoring events tab.
+
+---
+
+**TODO** *Add second part if deemed necessary*
+
+---
+
+### Feedback
+Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?

@@ -7,9 +7,12 @@ Task #|Points|Description|
 [Task 1](#task-1-what-measures-have-you-taken-to-protect-yourself-from-cyber-crimes) | 1 | Measures Against Cyber Crimes
 [Task 2](#task-2-personal-threat-model) | 1 | Personal Threat Model
 [Task 3](#task-3-company-security-policy) | 1 | Company Security Policy
-[Task 4](#task-4-security-audit) | 1 | Security Audit
+[Task 4](#task-4-security-audit) | 1 | Personal Security Audit
+[Task 5](#task-5-virtual-machine-with-docker) | 1 | Virtual Machine & Docker
 
 ---
+
+> Please note the last task, 'virtual machine & docker' will have most focus on the exercise session to get it working for everyone doing it.
 
 # Tasks
 
@@ -25,7 +28,9 @@ Please keep your answer concise, but at **minimum** 150 words.
 
 ### Task 2: Personal Threat Model
 
-Possible tool to add to next run [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)
+Possible tool to add to next run [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
+
+A 'for more reading' [link](https://www.privacyguides.org/en/basics/threat-modeling/) 
 
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
@@ -81,9 +86,9 @@ You don't have to contain yourself to just text, you may include for example pic
 
 ---
 
-### Task 4: Security Audit
+### Task 4: Personal Security Audit
 
-In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data. We also deploy a Security Information and Event Management software to monitor and analyze systems.
+~~In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data. We also deploy a Security Information and Event Management software to monitor and analyze systems.~~ **TODO** *Rewrite and add vm part below, for the full point docker must work*
 
 ### Task 4A: Network scan 
 
@@ -150,36 +155,11 @@ This part of task 4 is to check yourself with haveibeenpwned. This should let yo
 2. Screenshot of haveibeenpwned search, you can redact information if you want.
 3. Did you change passwords and/or email + password combos, that were leaked, if not, do it.
 
-### Task 4C: [Wazuh](https://www.wazuh.com)
+### Task 5: Virtual Machine with Docker
 
-Wazuh is an free and open source "unified XDR and SIEM protection for endpoints and cloud workloads." In this task we are going to focus more on the [SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem) side of things. Take a look at their [website](https://wazuh.com/platform/siem/) and [github](https://github.com/wazuh/wazuh) to familiarize yourself with the capabilities and features Wazuh SIEM offers.
+The last part of this weeks tasks is to set up the courses virtual machine and get it ready with docker working. This weeks exercise session will focus on this. 
 
->**Note**
->Task has been written on Version 4.5, when going through documentation, you can switch to Version 4.5 from the top-left.
-
-Start of with deploying the Wazuh [single-node on Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html). You should go through the documentation to understand what's going on, but the following commands should be enough:
-
-```console
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.5.1
-cd wazuh-docker/single-node
-docker-compose -f generate-indexer-certs.yml run --rm generator
-docker-compose up -d
-```
-
-You can access the Wazuh (WUI)WebUI at your localhost, to do this go to [https://localhost](https://localhost). By default Wazuh uses self signed certs and you won't be directed to the site directly, instead click the advanced tab and find the button for "Accept the risk and continue". This will direct you to the site, and from then on you should be able to use it normally.
-
-Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your internal ip address. This step should be straightforward.
-
-Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on both agents, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
-
-You are to trigger the FIM with atleast two different events. Then answer the questions below.
-
-**What to return:**
-1. What rule descriptions did you get?
-2. What are the MITRE ATT&CK techniques(include ID) Wazuh reports for these events?
-3. What is the reported MITRE techniques for deleting files or directories inside monitored directories?
-4. Explain in your own words where, when and why should these systems be used.
-5. Add a screenshot of your integrity monitoring events tab.
+**TODO** add a checklist here.
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
