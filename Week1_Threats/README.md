@@ -8,29 +8,81 @@ Task #|Points|Description|
 [Task 2](#task-2-personal-threat-model) | 1 | Personal Threat Model
 [Task 3](#task-3-company-security-policy) | 1 | Company Security Policy
 [Task 4](#task-4-security-audit) | 1 | Personal Security Audit
-[Task 5](#task-5-virtual-machine-with-docker) | 1 | Virtual Machine & Docker
+[Virtual Machine Setup](#virtual-machine-setup-virtual-machine-with-docker) | - | Virtual Machine & Docker
 
 ---
 
-> Please note the last task, 'virtual machine & docker' will have most focus on the exercise session to get it working for everyone doing it.
+> Please note the last task, 'virtual machine & docker' will have most focus on the first exercise session.
 
 # Tasks
 
 ### Task 1: What measures have you taken to protect yourself from cyber crimes?
 
-Write a short description of the actions you have done to fortify you defenses towards all sorts of cyber crimes, including possible servers and accounts you have. Please keep in mind not to include any specific details, such as passwords or tokens.
+Write a short description of the actions you have done to fortify your defenses towards all sorts of cyber crimes, including possible servers and accounts you have. Please keep in mind not to include any specific details, such as passwords or tokens.
 
 Have you been a victim of cyber crimes and do you think you could have prevented them? For example phishing and malware attacks. What could you improve on?
 
-Please keep your answer concise, but at **minimum** 150 words.
+Please keep your answer concise, bullet points are acceptable, but remember to answer atleast all mentioned topics.
 
 ---
 
-### Task 2: Personal Threat Model
+### Task 2: Threat Modelling
 
-Possible tool to add to next run [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
+Recommended to check out this very tight package on threat modelling. [The privacyguides' threat modelling info package.](https://www.privacyguides.org/en/basics/threat-modeling/) 
 
-A 'for more reading' [link](https://www.privacyguides.org/en/basics/threat-modeling/) 
+<details>
+<summary>Here's the essential points you can find in the above link:</summary>
+<br>
+
+- Identify your assets. WHAT do you want to protect? 
+
+- Who are your potential adversaries. WHO do you want to protect from? 
+
+- Assess the threats and likelyhoods of them for each of your assets. How LIKELY is it that you will need to protect it? 
+
+- Evaluate impact if an asset is compromised. How bad are the CONSEQUENCES if you fail? 
+
+- Cost. How much trouble and time are you willing to spend to prevent the consequences? 
+
+- Mitigate or mitigation plan; determine what you can do now and what to do if compromised. 
+
+</details>
+
+### Task 2A: [Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
+
+Threat Dragon is an OSS tool used to create threat model diagrams(see image below). The tool very specifically does **not** try to do too much on its own, rather gives control to the user and encourages their own thinking, as they should thoroughly analyse the system they are working on. 
+
+In this task we are using the second version, it's documentation is [here](https://owasp.org/www-project-threat-dragon/docs-2/install-options/). You may use your preferred method for installation, they are very similar, but we recommend **the desktop application,** as it stores the models on the local file system. First go through a bit of the documentation to get acquainted with the tool. Then you will be analysing a ready made flawed model, and you should find pain points and fix the model. The model is *"Student_website_Threat_Model.json"* in the threat dragon repository, there you will also find an example of how the report looks like without threats. Below you will find minimum requirements and a system description. 
+
+<details>
+<summary>Minimun requirements for the point:</summary>
+<br>
+
+Each **missing** or **incomplete** main point deducts 0.25 from this part.
+
+- Created at least 10 threats 
+    - Use STRIDE with approriate categories
+- Mitigated at least 5 threats 
+    - Must include how mitigated 
+- Named yourself as the reviewer 
+- Exported report as PDF and uploaded to github 
+
+</details>
+
+<details>
+<summary>System description:</summary>
+<br>
+
+The model is of a static student portfolio website with the following attributes: 
+
+- HTML5 and CSS 
+- Containerized with docker, Nginx
+- Cloud hosted, student rents server
+- Local development, connect via SSH 
+
+</details>
+
+### Task 2B: Personal Threat Model
 
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
@@ -38,25 +90,11 @@ In this task we are focusing solely on the cyber side of threat models as you wi
 
 The goal of creating a personal threat model is to help you understand potential ways to analyze your own cyber behavior and how to prioritize your efforts regarding your own personal security and privacy. It is also important for cyber security students to understand the types of threats they may face and what the potential impact can be. Threat modelling is also an important skill for security professionals and doing personal threat modelling can be translatable to real world businesses.
 
-You can find more information on [OWASP Threat modelling](https://owasp.org/www-community/Threat_Modeling) and in [The Threat Modelling Manifesto](https://www.threatmodelingmanifesto.org/)
+You can find more information on [OWASP Threat modelling,](https://owasp.org/www-community/Threat_Modeling) in [The Threat Modelling Manifesto](https://www.threatmodelingmanifesto.org/) and [Privacyguides' threat modelling](https://www.privacyguides.org/en/basics/threat-modeling/)
 
-<details>
-<summary>Here's few pointers for threat modelling:</summary>
-<br>
 
-- Identify your assets that could be targeted by cyber criminals
 
-- Assess the threats and likelyhoods of them for each of your assets
-
-- Identify vulnerabilities for example weak or repeated passwords
-
-- Evaluate impact if an asset is compromised
-
-- Mitigate or mitigation plan; determine what you can do now and what to do if compromised
-
-</details>
-
-We also recommend creating a visual representation of your threat model, diagrams and flowcharts are good for this. Discussing with your classmates can also help with any additional measures you can take to reduce your risks.
+We also recommend creating a visual representation(s) of your threat model(for example threat dragon), diagrams and flowcharts are good for this. Discussing with your classmates can also help with any additional measures you can take to reduce your risks.
 
 ---
 
@@ -88,11 +126,9 @@ You don't have to contain yourself to just text, you may include for example pic
 
 ### Task 4: Personal Security Audit
 
-~~In the previous tasks we tried to map out our precious data and security of our machines. Now we can perform a couple of tests to see if we find any anomalies or unsecured data. We also deploy a Security Information and Event Management software to monitor and analyze systems.~~ **TODO** *Rewrite and add vm part below, for the full point docker must work*
-
 ### Task 4A: Network scan 
 
-Let's start with a network scan, by now most will have already heard about [NMAP](https://nmap.org/); a network mapper which is 
+Let's start with a network scan, [NMAP](https://nmap.org/); a network mapper which is 
 > "A free and open source utility for network exploration and security auditing" -[NMAP Book](https://nmap.org/book/preface.html) 
 
 NMAP is available as both a CLI and [GUI (Zenmap)](https://nmap.org/zenmap/) application, most of the time you will use nmap from the command line. There are some benefits to Zenmap, such as the topology map, and we are going to showcase that here in this task. 
@@ -155,11 +191,21 @@ This part of task 4 is to check yourself with haveibeenpwned. This should let yo
 2. Screenshot of haveibeenpwned search, you can redact information if you want.
 3. Did you change passwords and/or email + password combos, that were leaked, if not, do it.
 
-### Task 5: Virtual Machine with Docker
+### Virtual Machine Setup: Virtual Machine with Docker
 
-The last part of this weeks tasks is to set up the courses virtual machine and get it ready with docker working. This weeks exercise session will focus on this. 
+You should setup the courses virtual machine and get it ready with docker working. This weeks exercise session will focus on this. 
 
-**TODO** add a checklist here.
+- Download the course virtual machine from https://ouspg.org/archlinux/.
+
+- Set it up in [VirtualBox](https://www.virtualbox.org/), install if it is not yet installed. You should set it up with no more than 4 cores, less than or around half of system RAM, around 30 GBs of space should be good and for future use make sure it can use USB. 
+
+- Credentials for the machine are 'arch/arch'
+
+- Update keyring in console with ```sudo pacman -S archlinux-keyring```
+
+- Update system with ```sudo pacman -Syu```
+
+- Test Docker with ```docker run hello-world```
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
