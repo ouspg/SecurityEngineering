@@ -4,15 +4,31 @@
 
 Task #|Points|Description|
 -----|:---:|----------|
-[Task 1](#task-1-what-measures-have-you-taken-to-protect-yourself-from-cyber-crimes) | 1 | Measures Against Cyber Crimes
-[Task 2](#task-2-personal-threat-model) | 1 | Personal Threat Model
-[Task 3](#task-3-company-security-policy) | 1 | Company Security Policy
-[Task 4](#task-4-security-audit) | 1 | Personal Security Audit
 [Virtual Machine Setup](#virtual-machine-setup-virtual-machine-with-docker) | - | Virtual Machine & Docker
+[Task 1](#task-1-what-measures-have-you-taken-to-protect-yourself-from-cyber-crimes) | 1 | Measures Against Cyber Crimes
+[Task 2](#task-2-company-security-policy) | 1 | Company Security Policy
+[Task 3](#task-3-threat-modelling) | 1 | Threat Modelling
+[Task 4](#task-4-personal-security-audit) | 1 | Personal Security Audit
 
 ---
 
-> Please note the last task, 'virtual machine & docker' will have most focus on the first exercise session.
+> Please note the part, 'virtual machine & docker' will have most focus on the first exercise session.
+
+### Virtual Machine Setup: Virtual Machine with Docker
+
+You should setup the courses virtual machine and get it ready with docker working. This weeks exercise session will focus on this. 
+
+- Download the course virtual machine from https://ouspg.org/archlinux/.
+
+- Set it up in [VirtualBox](https://www.virtualbox.org/), install if it is not yet installed. You should set it up with no more than 4 cores, less than or around half of system RAM, around 30 GBs of space should be good and for future use make sure it can use USB. (Defaults: 4 cores, 4gb ram, 30gb storage)
+
+- Credentials for the machine are 'arch/arch'
+
+- Update keyring in console with ```sudo pacman -S archlinux-keyring```
+
+- Update system with ```sudo pacman -Syu```
+
+- Test Docker with ```docker run hello-world```
 
 # Tasks
 
@@ -26,7 +42,33 @@ Please keep your answer concise, bullet points are acceptable, but remember to a
 
 ---
 
-### Task 2: Threat Modelling
+### Task 2: Company Security Policy
+Pick two topics from the list below to write a security policy on.
+An effort should be made to include one policy on one A4 page. 
+
+<details>
+<summary>Topics</summary>
+<br>
+
+- Password policy
+- Physical access policy
+- Cloud usage/security policy
+- System authentication policy
+- Network perimeter security policy
+- Social media security policy
+- BYOD(Bring Your Own Device) policy
+- General purpose information security policy
+
+</details>
+
+These policies are to be kept quite straight-forward and easily understandable for any employee, this includes explaining certain not well-known topics, for example a VPN or a network perimeter. The second lecture "Threat Models and Security Policies" gives very good advice on how to write sensible policies.
+
+You should also check [this](https://csrc.nist.rip/publications/nistpubs/800-12/800-12-html/chapter5.html) for detailed advice and explanation on for example types of policies. For example chapter 5.2.2 gives good insight on what basic components are good for issue-specific policies.
+You don't have to contain yourself to just text, you may include for example pictures and data-flow charts where beneficial.
+
+---
+
+### Task 3: Threat Modelling
 
 Recommended to check out this very tight package on threat modelling. [The privacyguides' threat modelling info package.](https://www.privacyguides.org/en/basics/threat-modeling/) 
 
@@ -58,14 +100,15 @@ In this task we are using the second version, it's documentation is [here](https
 <summary>Minimun requirements for the point:</summary>
 <br>
 
-Each **missing** or **incomplete** main point deducts 0.25 from this part.
+Each **missing** or **incomplete** main point deducts 0.1 from this part.
 
 - Created at least 10 threats 
     - Use STRIDE with approriate categories
 - Mitigated at least 5 threats 
     - Must include how mitigated 
 - Named yourself as the reviewer 
-- Exported report as PDF and uploaded to github 
+- Exported report as PDF and uploaded to github
+- Gave feedback on this task on your github page 
 
 </details>
 
@@ -93,34 +136,7 @@ The goal of creating a personal threat model is to help you understand potential
 You can find more information on [OWASP Threat modelling,](https://owasp.org/www-community/Threat_Modeling) in [The Threat Modelling Manifesto](https://www.threatmodelingmanifesto.org/) and [Privacyguides' threat modelling](https://www.privacyguides.org/en/basics/threat-modeling/)
 
 
-
 We also recommend creating a visual representation(s) of your threat model(for example threat dragon), diagrams and flowcharts are good for this. Discussing with your classmates can also help with any additional measures you can take to reduce your risks.
-
----
-
-### Task 3: Company Security Policy
-Pick two topics from the list below to write a security policy on.
-An effort should be made to include one policy on one A4 page. 
-
-<details>
-<summary>Topics</summary>
-<br>
-
-- Password policy
-- Physical access policy
-- Cloud usage/security policy
-- System authentication policy
-- Network perimeter security policy
-- Social media security policy
-- BYOD(Bring Your Own Device) policy
-- General purpose information security policy
-
-</details>
-
-These policies are to be kept quite straight-forward and easily understandable for any employee, this includes explaining certain not well-known topics, for example a VPN or a network perimeter. The second lecture "Threat Models and Security Policies" gives very good advice on how to write sensible policies.
-
-You should also check [this](https://csrc.nist.rip/publications/nistpubs/800-12/800-12-html/chapter5.html) for detailed advice and explanation on for example types of policies. For example chapter 5.2.2 gives good insight on what basic components are good for issue-specific policies.
-You don't have to contain yourself to just text, you may include for example pictures and data-flow charts where beneficial.
 
 ---
 
@@ -190,22 +206,6 @@ This part of task 4 is to check yourself with haveibeenpwned. This should let yo
 1. Has your account details leaked?
 2. Screenshot of haveibeenpwned search, you can redact information if you want.
 3. Did you change passwords and/or email + password combos, that were leaked, if not, do it.
-
-### Virtual Machine Setup: Virtual Machine with Docker
-
-You should setup the courses virtual machine and get it ready with docker working. This weeks exercise session will focus on this. 
-
-- Download the course virtual machine from https://ouspg.org/archlinux/.
-
-- Set it up in [VirtualBox](https://www.virtualbox.org/), install if it is not yet installed. You should set it up with no more than 4 cores, less than or around half of system RAM, around 30 GBs of space should be good and for future use make sure it can use USB. 
-
-- Credentials for the machine are 'arch/arch'
-
-- Update keyring in console with ```sudo pacman -S archlinux-keyring```
-
-- Update system with ```sudo pacman -Syu```
-
-- Test Docker with ```docker run hello-world```
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
