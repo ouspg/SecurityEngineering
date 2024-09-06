@@ -106,8 +106,9 @@ Each **missing** or **incomplete** main point deducts 0.2 from this part.
     - Use [STRIDE](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)) with approriate categories
 - Mitigated at least 5 threats 
     - Must include how mitigated and how that works 
-- Named yourself as the reviewer 
+- Filled in the spots with '???'
 - Exported report as PDF and uploaded to github
+    - Named yourself as the reviewer
 - Gave feedback on this task on your github page 
 
 </details>
