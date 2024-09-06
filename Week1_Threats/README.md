@@ -90,7 +90,7 @@ Recommended to check out this very tight package on threat modelling. [The priva
 
 </details>
 
-### Task 2A: [Threat Dragon](https://owasp.org/www-project-threat-dragon/) (1p)
+### Task 3A: [Threat Dragon](https://owasp.org/www-project-threat-dragon/) (1p)
 
 Threat Dragon is an OSS tool used to create threat model diagrams(see image below). The tool very specifically does **not** try to do too much on its own, rather gives control to the user and encourages their own thinking, as they should thoroughly analyse the system they are working on. 
 
@@ -126,7 +126,7 @@ The model is of a static student portfolio website with the following attributes
 
 </details>
 
-### Task 2B: Personal Threat Model (1p)
+### Task 3B: Personal Threat Model (1p)
 
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
