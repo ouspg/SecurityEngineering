@@ -7,7 +7,7 @@ Task #|Points|Description|
 [Virtual Machine Setup](#virtual-machine-setup-virtual-machine-with-docker) | - | Virtual Machine & Docker
 [Task 1](#task-1-what-measures-have-you-taken-to-protect-yourself-from-cyber-crimes) | 1 | Measures Against Cyber Crimes
 [Task 2](#task-2-company-security-policy) | 1 | Company Security Policy
-[Task 3](#task-3-threat-modelling) | 1 | Threat Modelling
+[Task 3](#task-3-threat-modelling) | 2 | Threat Modelling
 [Task 4](#task-4-personal-security-audit) | 1 | Personal Security Audit
 
 ---
@@ -90,7 +90,7 @@ Recommended to check out this very tight package on threat modelling. [The priva
 
 </details>
 
-### Task 2A: [Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
+### Task 2A: [Threat Dragon](https://owasp.org/www-project-threat-dragon/) (1p)
 
 Threat Dragon is an OSS tool used to create threat model diagrams(see image below). The tool very specifically does **not** try to do too much on its own, rather gives control to the user and encourages their own thinking, as they should thoroughly analyse the system they are working on. 
 
@@ -100,12 +100,12 @@ In this task we are using the second version, it's documentation is [here](https
 <summary>Minimun requirements for the point:</summary>
 <br>
 
-Each **missing** or **incomplete** main point deducts 0.1 from this part.
+Each **missing** or **incomplete** main point deducts 0.2 from this part.
 
 - Created at least 10 threats 
-    - Use STRIDE with approriate categories
+    - Use [STRIDE](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)) with approriate categories
 - Mitigated at least 5 threats 
-    - Must include how mitigated 
+    - Must include how mitigated and how that works 
 - Named yourself as the reviewer 
 - Exported report as PDF and uploaded to github
 - Gave feedback on this task on your github page 
@@ -125,7 +125,7 @@ The model is of a static student portfolio website with the following attributes
 
 </details>
 
-### Task 2B: Personal Threat Model
+### Task 2B: Personal Threat Model (1p)
 
 A threat model is a tool used widely in security, it can be used for example to identify sensitive or vulnerable data or systems. Its goal is to identify potential vulnerabilities and a likely impact of a security breach, helping companies take proper measures to mitigate and / or prevent these. A threat model can also help companies assess and prioritize its security efforts by identifying which assets are the most critical and which threats are the most probable. Overall, a threat model is a vital part of a comprehensive cyber security strategy helping organizations manage risks and breaches, and how to allocate defense budget.
 
