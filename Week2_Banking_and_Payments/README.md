@@ -7,7 +7,7 @@ Task #|Points|Description|
 [Task 1](#task-1-choose-a-or-b) | 1 | Browsers and Banking Security ***or*** Certifcates
 [Task 2](#task-2-cards-and-payments) | 1 | Cards and Payments
 [Task 3](#task-3-card-fraud) | 1 | Card Fraud
-[Task 4](#task-4-wazuh) | ~~2~~ | SIEM Wazuh **check grading on this**
+[Task 4](#task-4-wazuh) | 1 | SIEM Wazuh 
 
 ---
 
@@ -115,7 +115,7 @@ https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.htm
 
 **Questions:**
 
-Write a summary (max 800 words) on "Evolution of card fraud" in which you answer at least the following questions:
+Write a summary (max 700 words) on "Evolution of card fraud" in which you answer **at least** the following questions:
 
 - What kinds of card fraud exist?
     - How does card fraud type prevalence differ geographically?
@@ -137,19 +137,17 @@ Write a summary (max 800 words) on "Evolution of card fraud" in which you answer
 
 ---
 
-**TODO** Update late august before course to recent version
+> **note**
+> Task tested to work on v4.9.0, written and designed on v4.5.1. v4.9 has a couple of known issues with details being unable to be read from events. If you face issues, fallback to e.g v4.5.1, which still works.
 
 ---
 
 Wazuh is an free and open source "unified XDR and SIEM protection for endpoints and cloud workloads." In this task we are going to focus more on the [SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem) side of things. Take a look at their [website](https://wazuh.com/platform/siem/) and [github](https://github.com/wazuh/wazuh) to familiarize yourself with the capabilities and features Wazuh SIEM offers.
 
->**Note**
->Task has been written on Version 4.5, when going through documentation, you can switch to Version 4.5 from the top-left.
-
 Start of with deploying the Wazuh [single-node on Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html). You should go through the documentation to understand what's going on, but the following commands should be enough:
 
 ```console
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.5.1
+git clone https://github.com/wazuh/wazuh-docker.git -b <VERSION NUMBER e.g v4.9.0 or v4.5.1>
 cd wazuh-docker/single-node
 docker-compose -f generate-indexer-certs.yml run --rm generator
 docker-compose up -d
@@ -157,9 +155,11 @@ docker-compose up -d
 
 You can access the Wazuh (WUI)WebUI at your localhost, to do this go to [https://localhost](https://localhost). By default Wazuh uses self signed certs and you won't be directed to the site directly, instead click the advanced tab and find the button for "Accept the risk and continue". This will direct you to the site, and from then on you should be able to use it normally.
 
-Next deploy atleast 2 agents with different operating systems, one on a virtual machine and one on your own OS for example. You can do this via the Wazuh WUI(Web User Interface), or when your OS is not available there, you can follow [this](https://documentation.wazuh.com/current/user-manual/agent-enrollment/index.html), the first method is recommended. The IP address is your internal ip address. This step should be straightforward.
+Next deploy an agent or agents. You can deploy the agent(s) on your own platform(server, desktop, etc...) or the course virtual machine. For the course virtual machine use the "installation from source" --> "installing Wazuh agent from sources". Arch linux, the course VM uses pacman for package management so you could use that. [Installation alternatives](https://documentation.wazuh.com/current/deployment-options/wazuh-from-sources/wazuh-agent/index.html) in the documents.  
 
-Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on both agents, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
+For other environments, find the appropriate [installation documention](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html), many can be installed in the Wazuh WUI(Web User Interface), for windows, choose windows and fill out the details, run the command and start the agent. For the ip address of the server, you can use your internal ip address.
+
+Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on your agent(s), you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
 
 You are to trigger the FIM with atleast two different events. Then answer the questions below.
 
@@ -167,14 +167,8 @@ You are to trigger the FIM with atleast two different events. Then answer the qu
 1. What rule descriptions did you get?
 2. What are the MITRE ATT&CK techniques(include ID) Wazuh reports for these events?
 3. What is the reported MITRE techniques for deleting files or directories inside monitored directories?
-4. Explain in your own words where, when and why should these systems be used.
+4. Explain in your own words where, when and why should these systems be used, would they be helpful in banking.
 5. Add a screenshot of your integrity monitoring events tab.
-
----
-
-**TODO** *Add second part if deemed necessary*
-
----
 
 ### Feedback
 Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
