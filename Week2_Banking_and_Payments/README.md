@@ -159,7 +159,7 @@ Next deploy an agent or agents. You can deploy the agent(s) on your own platform
 
 For other environments, find the appropriate [installation documention](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html), many can be installed in the Wazuh WUI(Web User Interface), for windows, choose windows and fill out the details, run the command and start the agent. For the ip address of the server, you can use your internal ip address.
 
-Create a directory named integrity and add a file to it on both machines and enable FIM(File Integrity Monitoring) on your agent(s), you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
+Create a directory named integrity and add a file to it, then enable FIM(File Integrity Monitoring) on your agent(s) on that folder, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
 
 You are to trigger the FIM with atleast two different events. Then answer the questions below.
 
