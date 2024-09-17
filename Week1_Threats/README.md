@@ -150,7 +150,11 @@ Let's start with a network scan, [NMAP](https://nmap.org/); a network mapper whi
 
 NMAP is available as both a CLI and [GUI (Zenmap)](https://nmap.org/zenmap/) application, most of the time you will use nmap from the command line. There are some benefits to Zenmap, such as the topology map, and we are going to showcase that here in this task. 
 
-NMAP is available on all the commmon platforms and you can get it from their [website](https://nmap.org/download), however if you are using Linux, you can most likely get it from your package manager. Go ahead and proceed with the installation, for Linux you might have to install Zenmap package as it usually is not bundled with NMAP. If you are using Windows we recommend leaving everything as default.
+NMAP is available on all the commmon platforms and you can get it from their [website](https://nmap.org/download), however if you are using Linux, you can most likely get it from your package manager. 
+
+> For course VM ```yay zenmap``` and choose the 'aur/zenmap' option 
+
+Go ahead and proceed with the installation, for Linux you might have to install Zenmap package as it usually is not bundled with NMAP. If you are using Windows we recommend leaving everything as default.
 
 >**Note**
 >Before scanning your network, make sure to let everyone on the network know about it, and more importantly give them the ability to disconnect their devices. 
