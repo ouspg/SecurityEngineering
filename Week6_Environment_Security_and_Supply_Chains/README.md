@@ -15,6 +15,7 @@ Task #|Points|Description|
 ### Task 1: Secure Running Environment?
 
 It is important to understand the differences and security capabilities of the concepts listed below. Choose two out of the four concepts and write a short explanation of them and their respective security capabilities and incapabilities.
+
 Focus on giving a good overview of the security limits for the concepts.
 
 - TPM
@@ -82,21 +83,23 @@ Maximum 4 visual representations,
 Each visual representation is minus 50 words off the total required.**
 
 For example a report with 3 visuals requires 350 words.  
-The visuals must be useful for the raport, ex. company logos do not count.
+The visuals must be useful for the report, ex. company logos do not count.
 
 ---
 
 ### Task 3: Securing Docker
 
-**Linux required for full completion; [Course provided VM](https://ouspg.org/resources/laboratories/)**
+**Linux required for full completion; [Course provided VM](https://ouspg.org/archlinux)**
 
 In this exercise we are checking out some tools and practices to help you create better and more secure Docker containers. You are to either use your own Dockerfiles or images, create your own dockerfile for this exercise or you can use ones created by other people. The important part here is auditing and fixing the files, image or container. You shouldn't use ones that have been well audited; the files you choose for this task should provide some output, this is likely with most files.
+
+> We have added an example Dockerfile with an additional file it needs, you may use this, but it might not be the easiest or best way to complete the task. You **need** to add permissions for the executable 'docker-entrypoint.sh' file before building.
 
 These tasks provide a great chance to contribute to open source projects, especially if you are looking for a great way to make your first pull requests. You can find Open Source Software with Dockerfiles and lint these, fix the problems provided by the linter when valid, open up a pull request and suggest these fixes with good explanations. 
 
 Your analysis with Trivy (or scanner of your choice) can be opened as an issue, or you can write it into a report and try to open a pull request for it or fixes you made. These might require more work to get accepted though, but can be a great contribution to certain projects.
 
-> A small warning, as some of these tools can be quite complicated, reading through the documentation could take some time. All necessary parts **should** be in this task sheet, but not all problems can be covered. And due to the nature of the course, we expect students to be able to read and take in documentations.
+> A small warning, as some of these tools can be quite complicated, reading through the documentation could take some time. All necessary parts **should** be in this task sheet, but not all problems can be covered. And due to the nature of the course, we expect students to learn and be able to read and take in documentations.
 
 ---
 
@@ -130,11 +133,15 @@ Not all problems indicated by the tool have to be fixed, and not all warnings sh
 
 Next comes analyzing the image for vulnerabilities in containers. It is also common to use these scanners in CI/CD pipelines. Again, you can use any analyzer you want, but we're going to recommend [Trivy](https://github.com/aquasecurity/trivy). Trivy is an open source project by [Aquasecurity](https://www.aquasec.com/), and it has quite the nice [documentation](https://aquasecurity.github.io/trivy/v0.41/). This task should be doable without reading too much documentation, we do  however recommend checking it out.  They cover at least **most common** use cases and problems there. You can also refer to this documentation if you want to know more about the tool itself and other ways you can use it, such as Kubernetes, filesystem and GitHub repository scanning.
 
-Trivy can be run on docker with  
-```docker run aquasec/trivy image <image_name>```  
-Or it can be installed from a [binary](https://github.com/aquasecurity/trivy/releases/tag/v0.45.1) or from a [package manager](https://aquasecurity.github.io/trivy/v0.45/getting-started/installation/)  
+For building from Dockerfile ```docker build -t <name> .```
+
+Trivy can be run on docker or it can be installed from a [binary](https://github.com/aquasecurity/trivy/releases/tag/v0.45.1) or from a [package manager](https://aquasecurity.github.io/trivy/v0.45/getting-started/installation/)  
+
+For Archlinux ```pacman -S trivy```  
 And then you can run it with:  
 ```trivy image <image_name>``` for Docker images.  
+
+Running on docker should work with ```docker run aquasec/trivy image <image_name>```
   
 Here you should **try** to fix atleast some errors, the recommended tool Trivy can tell you if a vulnerable piece of software has a patch or a newer version that addressed the vulnerability. However we do understand that not every vulnerability can be fixed.
 
@@ -152,17 +159,38 @@ Here you should **try** to fix atleast some errors, the recommended tool Trivy c
 
 Finally we are going to look at the runtime security of containers, here again you can use any tool you want to, but we're going to recommend a tool originally by [Sysdig](https://sysdig.com/), currently under [CNCF](https://www.cncf.io/). The tool [Falco](https://github.com/falcosecurity/falco) is designed to detect and alert in real-time. The tool is for Linux operating systems.
 
-They as well have a vast and very detailed [documentation](https://falco.org/docs/) with multiple ways to install and run the tool. The documentation has instructions for [installing on different Linux distributions](https://falco.org/docs/getting-started/source/), and we recommend following either these, or installing the [falco binary](https://falco.org/docs/getting-started/installation/#falco-binary). You can also use their own [tutorials](https://falco.org/docs/tutorials/) to get more familiar with the tool.
+They as well have a vast and very detailed [documentation](https://falco.org/docs/) with multiple ways to install and run the tool. The documentation has instructions for [installing on different Linux distributions](https://falco.org/docs/getting-started/source/), installing the [falco binary](https://falco.org/docs/getting-started/installation/#falco-binary), and running with Docker, which we recommend here. You can also use their own [tutorials](https://falco.org/docs/tutorials/) to get more familiar with the tool.
+
+### Installing into Docker
+
+For this task we are going to use the Fully Privileged Modern eBPF version, you can find more information and other ways to run it [here](https://falco.org/docs/setup/container/). 
+
+The command provided on the page is  
+```
+docker pull falcosecurity/falco-no-driver:latest
+docker run --rm -it \
+           --privileged \
+           -v /var/run/docker.sock:/host/var/run/docker.sock \
+           -v /proc:/host/proc:ro \
+           -v /etc:/host/etc:ro \
+           falcosecurity/falco-no-driver:latest
+```
+
+This command will be enough to get you up and running with Falco, given you are already using linux with docker working.
 
 ### Triggering Alerts
 
-Your goal here is to choose the rules, start the tool and trigger alerts about and from within the containers. One easy way you can trigger an alert is with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert.  
+If you used another way to install you need to choose the rules. If you used the method above, you can go forward and start looking at triggering alerts. 
 
-However you are to trigger another alert from within the containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets.
+For the task you need to trigger alerts about and from within the containers. One easy way you can trigger an alert is with ```--privileged``` containers, as the ```--privileged``` flag itself creates an alert.  
+
+However you are to trigger another alert from within the containers, here again their documentation provides great instructions on which types of activities create which types of alerts, and with which rulesets, the above method uses the modern eBPF. 
+
+If you are using the example Dockerfile for these tasks, you may for example install and/or run software inside a container for some output from falco.
 
 > `docker run -it <image_name> /bin/sh` can be used to start an interactive shell in a container. You can use any shell you want, like bash, but not every distribution, or container has it.
 
-You can modify the rules provided with the installation, most likely not necessary, however it is encouraged to take look at least.
+You can modify the rules provided with the installation, not mandatory, however it is encouraged to take look at least.
 
 ### What to return:
 - What runtime security scanner you used
