@@ -93,7 +93,7 @@ The visuals must be useful for the report, ex. company logos do not count.
 
 In this exercise we are checking out some tools and practices to help you create better and more secure Docker containers. You are to either use your own Dockerfiles or images, create your own dockerfile for this exercise or you can use ones created by other people. The important part here is auditing and fixing the files, image or container. You shouldn't use ones that have been well audited; the files you choose for this task should provide some output, this is likely with most files.
 
-> We have added an example Dockerfile with an additional file it needs, you may use this, but it might not be the easiest or best way to complete the task. You **need** to add permissions for the executable 'docker-entrypoint.sh' file before building.
+> We have added an example Dockerfile with an additional file it needs, you may use this. If you are well versed with docker and/or containers in general it might not be the easiest or best way to complete the task, you should build your own file for this task or contribute to open source projects with docker containers. You **need** to download and add permissions for the executable 'docker-entrypoint.sh' file before building.
 
 These tasks provide a great chance to contribute to open source projects, especially if you are looking for a great way to make your first pull requests. You can find Open Source Software with Dockerfiles and lint these, fix the problems provided by the linter when valid, open up a pull request and suggest these fixes with good explanations. 
 
