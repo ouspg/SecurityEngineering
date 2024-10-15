@@ -7,7 +7,7 @@ Task #|Points|Description|
 [Task 1](#task-1-safety-concerns) | 1 | Safety Concerns
 [Task 2](#task-2-static-and-dynamic-analyzers) | 1 | Static and Dynamic Analysers 
 [Task 3](#task-3-security-certification) | 1 | Security Certifications
-[Task 4](#task-4-tietoturvamerkki) | 1 | Tietoturvamerkki
+[Task 4](#task-4-nis2--red) | 1 | NIS2 & RED
 [Task 5](#task-5-showcase) | 1 | Showcase
 
 (4 points max)
@@ -60,24 +60,26 @@ Consider the different incentives (both 'Good' and 'Bad' incentives) for Securit
 
 ---
 
-### Task 4: Tietoturvamerkki
+### Task 4: NIS2 & RED
 
-You might be familiar with CE-Certification regarding electrical equipment and products. Although it is not a guarantee of safety, you can feel a certain amount of confidence towards the product. Could something similar be possible for Cybersecurity? 
+There are currently two incoming European Union Directives that will affect current and future products and services. These Directives are:
+- Revised Directive on Security of Network and Information Systems (NIS2)
+- Radio Equipment Directive (RED)
 
-Take a look at Tietoturvamerkki and write an essay answering the following questions: 
+Traficom has collected information regarding both quite concisely providing a good starting point for familiarizing on the subject
+- (NIS2) https://www.kyberturvallisuuskeskus.fi/en/our-activities/regulation-and-supervision/nis2-european-union-cybersecurity-directive
+- (RED) https://traficom.fi/en/news/new-information-security-requirements-eu-improve-information-security-wireless-devices
 
-- What is Tietoturvamerkki 
-- What kind of products does it concern 
-- How does a product get a Tietoturvamekki certificate 
-- What does the certificate guarantee about the product and what it does not 
-- Include your own thoughts about this style of certificate. Would you pay more for a certified product? Do you see any problems regarding the certificate? 
+**PICK ONE, Either NIS2 or RED and answer the following questions**  
+- Concisely explain the main goal of the directive?
+- Which types of products does it concern?
+- Which types of organizations does it concern?
+- What kind of cybersecurity measures have to be implemented for a product/organization to comply with the directive?
+- When (Date) do organizations/products need to comply with the directive?
+- What are possible penalties?
+- Your own thoughts: How does this benefit you/society overall. Are there positive and negative aspects?
 
-400 words **maximum**. 
- 
-
-FI: https://tietoturvamerkki.fi/fi/tietoturvamerkki-etusivu 
-
-EN: https://tietoturvamerkki.fi/en/cybersecurity-label 
+**You can answer directly to each bullet point with few sentences**  
 
 
 ---
