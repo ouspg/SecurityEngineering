@@ -88,7 +88,7 @@ Traficom has collected information regarding both quite concisely providing a go
 
 Choose a Cybersecurity tool of your choice and answer the following questions about it.
 
-Pick a new tool that has not been featured in the course, so the following are forbidden from this task: (Nmap/Zenmap, Wazuh, thc-hydra, BurpSuite, Trivy, Hadolint, Falco)
+Pick a new tool that has not been featured in the course, so the following are forbidden from this task: (Threat Dragon, Nmap/Zenmap, Wazuh, thc-hydra, BurpSuite, Trivy, Hadolint, Falco)
 
 - Name of the tool
 - Link to the tool website/repository
