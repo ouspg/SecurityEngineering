@@ -57,10 +57,10 @@ You have probably seen the following kind of warning when browsing the internet:
 
 Read the following entries on Certificate Authorities and Certificate Transparency and answer questions:
 
-https://en.wikipedia.org/wiki/Certificate_authority
-https://en.wikipedia.org/wiki/Certificate_Transparency
-https://certificate.transparency.dev/howctworks/
-https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
+https://en.wikipedia.org/wiki/Certificate_authority  
+https://en.wikipedia.org/wiki/Certificate_Transparency  
+https://certificate.transparency.dev/howctworks/  
+https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html  
 
 **Questions:**
 
@@ -73,9 +73,9 @@ https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
 
 **Read the following:**
 
-https://en.wikipedia.org/wiki/Payment_card
-https://en.wikipedia.org/wiki/EMV
-https://en.wikipedia.org/wiki/Multi-factor_authentication
+https://en.wikipedia.org/wiki/Payment_card  
+https://en.wikipedia.org/wiki/EMV  
+https://en.wikipedia.org/wiki/Multi-factor_authentication  
 
 **Questions: Payments**
 
@@ -103,14 +103,14 @@ One part of understanding payment card security is monitoring how the cards are 
 **Read the following reports:**
 
 
-https://www.ecb.europa.eu/pub/pdf/cardfraud/cardfraudreport201207en.pdf
-https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202008~521edb602b.en.html
-https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202110~cac4c418e8.en.html
+https://www.ecb.europa.eu/pub/pdf/cardfraud/cardfraudreport201207en.pdf  
+https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202008~521edb602b.en.html  
+https://www.ecb.europa.eu/pub/cardfraud/html/ecb.cardfraudreport202110~cac4c418e8.en.html  
 
 **Supporting Resources:**
 
-https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html (Search: "Fraud")
-https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.html
+https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html (Search: "Fraud")  
+https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.html  
 
 
 **Questions:**
