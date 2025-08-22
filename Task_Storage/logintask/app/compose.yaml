@@ -1,0 +1,33 @@
+services:
+  web:
+    build: .
+    container_name: logintask1
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=rootlogin
+      - DB_NAME=login
+    depends_on:
+      - db
+    networks:
+      - login-network
+
+  db:
+    image: mysql:9.4
+    container_name: loginsql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootlogin
+      MYSQL_DATABASE: login
+      MYSQL_USER: user
+      MYSQL_PASSWORD: login
+    ports:
+      - "3306:3306"
+    networks:
+      - login-network
+
+networks:
+  login-network:
+

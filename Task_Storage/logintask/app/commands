@@ -1,0 +1,23 @@
+CREATE NETWORK
+docker network create login-network
+
+START UP
+first time start
+	docker-compose up --build
+putting everything up after creating users
+	docker-compose up
+
+USER CREATION
+docker exec -it loginsql mysql -u root -p
+	USE login;
+	
+	CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(50) NOT NULL UNIQUE,
+	password VARCHAR(100) NOT NULL
+	);
+
+	INSERT INTO users (username, password) VALUES ('admin', 'admin1');
+	INSERT INTO users (username, password) VALUES ('user', 'user1');
+	
+	SELECT * FROM users;
