@@ -10,7 +10,7 @@ Task #|Points|Description|
 [Task 4](#task-4-nis2--red) | 1 | NIS2 & RED
 [Task 5](#task-5-showcase) | 1 | Showcase
 
-(4 points max)
+**(4 POINTS MAXIMUM FOR THIS WEEK)**
 
 ---
 
@@ -33,7 +33,7 @@ In terms of medical equipment and automotive industry mentioned in the Lecture 1
 
 Explain the difference between static and dynamic analyzers. Explain what the advantages are of using these tools during production.  Pick one of the Static or Dynamic testing methods mentioned in the Lecture 14 and write a brief description of it. 
 
-300 words **maximum**, cite if you use external sources 
+250 words **maximum**, cite if you use external sources 
 
 [Security Engineering Lecture 14: Assurance and Sustainability](https://www.youtube.com/watch?v=cmWQF2FDlG8) 
 
@@ -62,15 +62,17 @@ Consider the different incentives (both 'Good' and 'Bad' incentives) for Securit
 
 ### Task 4: NIS2 & RED
 
-There are currently two incoming European Union Directives that will affect current and future products and services. These Directives are:
-- Revised Directive on Security of Network and Information Systems (NIS2)
+There are currently three European Union Directives that will affect current and future products and services. These Directives are:
+- Cyber Resilience Act (CRA)
 - Radio Equipment Directive (RED)
+- Revised Directive on Security of Network and Information Systems (NIS2)
 
-Traficom has collected information regarding both quite concisely providing a good starting point for familiarizing on the subject
-- (NIS2) https://www.kyberturvallisuuskeskus.fi/en/our-activities/regulation-and-supervision/nis2-european-union-cybersecurity-directive
+Traficom has collected information regarding all three quite concisely providing a good starting point for familiarizing on the subject
+- (CRA) https://www.kyberturvallisuuskeskus.fi/en/toimintamme/saantely-ja-valvonta/kyberkestavyyssaados-cyber-resilience-act-cra
 - (RED) https://traficom.fi/en/news/new-information-security-requirements-eu-improve-information-security-wireless-devices
+- (NIS2) https://www.kyberturvallisuuskeskus.fi/en/our-activities/regulation-and-supervision/nis2-european-union-cybersecurity-directive
 
-**PICK ONE, Either NIS2 or RED and answer the following questions**  
+**PICK ONE, Either CRA, RED or NIS2 and answer the following questions**  
 - Concisely explain the main goal of the directive?
 - Which types of products does it concern?
 - Which types of organizations does it concern?
