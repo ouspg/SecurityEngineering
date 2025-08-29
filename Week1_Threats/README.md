@@ -139,6 +139,9 @@ You can find more information on [OWASP Threat modelling,](https://owasp.org/www
 
 We also recommend creating a visual representation(s) of your threat model(for example threat dragon), diagrams and flowcharts are good for this. Discussing with your classmates can also help with any additional measures you can take to reduce your risks.
 
+You can follow this flowchart from a previous students answer and expand on it
+![Example Personal Threat Model](PersonalThreatModelExampleFlowchart.png)
+
 ---
 
 ### Task 4: Personal Security Audit
