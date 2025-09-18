@@ -30,12 +30,25 @@ Look at the following snippets from a browsers address bar:
 **Questions:**
 
 - What does the "Not Secure" warning mean in the first picture and what risks does visiting sites with the warning pose?
+  Answer:- The "Not Secure" warning means the connection is not secure. It is not trustable to use. It may affect our personal data and information.
+         - Also, The banking sector always have to use HTTPS to encrypt our password and account details. The banking site without HTTPS is insecure and never be used. So we can judge that it is a phishing or scam.
+
 - Why does the second site show up as "trusted" to the browser?
+  Answer:- It is secure to use because it uses a valid HTTPS connection which is encrypted.
+         - It also shows that connection is private and secure to use. 
+
 - What other ways are there to detect a phishing/scam site? 
     - Are there any tools available online?
+  Answer:- Yes, there are some tools available online to detect the scam sites.
+For Example - Password manager - It can be used to protect us from login any unknown website. If site is unknown then password and login details will not automatically filled which we have already saved for our known website.
+            - URL scanner- It can be used to check and verify the URL website.
+
 - What is typosquatting and how does it relate to the pictures?
     - What is **UDRP** and how does it help with combatting typosquatting?
     - If you were to own the domain **ouspg.org** and would be running your crypto banking application at **bank.ouspg.org**, what domains could you monitor for warning signs of possible phishing attempts against your customers?
+  Answer:- Typosquatting means where hacker uses the same domain with misspelling.
+         - UDRP stands for Uniform Domain-Name Dispute-Resolution Policy. It is established by thr internet corporation for resolving the dispute like typosquatting. trademark can file a case against disputed domain and trademark have to prove that dispute domain is similar to their trademark and used for bad faith. By doing this, the disputed domain can be canceled.
+         - If the original domain is "ouspg.org", then the hacker can use domains like "ouspg.net", "ouspg.com", "ouspg.bank", "bank.ouspg.org", "ousp.org"      
 
 
 #### Task 1B: Certificates
@@ -49,9 +62,17 @@ You have probably seen the following kind of warning when browsing the internet:
 - What are digital certificates used for?
     - Why are certificates important for online payments and banking security?
     - What other uses do certificates have?
+ Answer:- Digital certificates is like digital document which proves its identity and domain.
+        - To make an online payment and banking security certification is important to encrypt the customer's personal data like password, account details etc.
+        - Authentification is also important which proves that we are connected to the correct website.
+        - Other use of certificates is to encrypt emails, To sign in the software applications and secure the connections.
+
 - What kind of attacks does TLS mitigate and why is this important for online banking?
 - How do browsers use certificates for ensuring browsing security?
     - What does the warning in the picture above mean?
+  Answer:- TLS encrypts the connection and protect our personal information. Hacker can not attack without a valid certificate for bank's domain.
+         - To ensure browser's security, browser always check the cerificates. When we visit any website, the website itself sends the certificate to the browser and browser validate that certificate. Also browser match the domain name.
+         - The warning "Your connection is not private" is showing that the connection is not encrypted and also it might be possible that cerification process has been failed or cerificate is no longer valid. Domain name might also be different.
 
 **Certificate Authorities**
 
@@ -66,7 +87,9 @@ https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
 
 - Why would it be bad if a trusted certificate authority was compromised?
 - Why is certificate transparency important?
-
+Answer:- If certificate authority was compromised, the consequences would occur. The hacker could create a same fake website for bank.
+         They could read passwords, financial details, and private messages, without triggering any browser warnings. This can be harmful for bank customers.
+       - Certificate transparency is very important. The bak can moniter any certificate issued for their domain. If they see one they didn't request, they immediately know it's fraudulent and can take action. The Certificate proves its identity and attacker can not login any random website easily.
 ---
 
 ### Task 2: Cards and Payments
@@ -80,20 +103,34 @@ https://en.wikipedia.org/wiki/Multi-factor_authentication
 **Questions: Payments**
 
 - Why do modern payment cards use a chip and not a magnetic stripe?
+Answer:- In magnetic stripe, it is easy to copy the data and use every time that data for fraud because magnetic stripe contains same expiry date and card number.
+         In Chip method, it creates a unique number after the payment and attacker can not copy that. If attacker do that then it is useless for future transactions. Chip generate one time use code, which is verfied by bank. Hence, the chip is safe and easy to use for making transactions.
+
 - What are EMV Certificates and why are they relevant for payment protection?
+Answer:- EMV cerificates provides authentification and attacker can not edit the data or make any transactions.
+
 - What attacks exist against payment cards?
     - Card-not-present?
     - Contactless payment?
+Answer:- The most attacks are nowadays are online where physical card is not required. We all make payments through our mobile and through CVV number. So online fraud can be happen related to the CVV, expiray date, card number etc.
+       - In contactless payment, we use NFC payment method which is more safe than other. It can be possible that attacker can track the NFC and hack the data.
 
 **Questions: MFA**
 
 - How is multi-factor authentication (MFA) used in banking?
+Answer:- MFA use for more security. If one authentification is compromised, attacker still cannot login into the bank's official website without completing all the authentification. Authentification can be password login, after that OTP verfication can be used for the confirmation.
+
 - How does multi-factor authentication increase payment security?
+Answer:- In MFA, if password compromised, still attcker cannot access the website or account. Attacker have to get the OTP code and other verification details to know our account details. Overall MFA increase the payment security in many ways.
+
 - What MFA methods are you using in you daily life?
+Answer:- I generally use biometrics to unlock any apps in my mobile. Moreover I received OTP for login security via SMS. Also I use authentification app for more security reasons.
+
 - What attacks exists against different forms of 2FA?
     - Time-based-one-time-password?
     - Text Message?
-
+Answer:- Attacker can ask real time code like OTP by creating a fake website like bank.
+       - OTP is received via text message, so attacker can try to hack the text messages first to read the OTP.
 ---
 
 ### Task 3: Card Fraud
@@ -119,17 +156,32 @@ Write a summary (max 700 words) on "Evolution of card fraud" in which you answer
 
 - What kinds of card fraud exist?
     - How does card fraud type prevalence differ geographically?
+Answer:- 1) Geographical breakdowns of counterfeit card present fraud
+         2) Geographical distribution of card fraud
+         3) A country-by-country and regional perspective on card fraud
+
 - How has the fraud landscape changed between 2008-2019? Why?
     - What type of fraud has seen a notable increase during the last decade?
     - What technologies or regulations have had an impact on card fraud?
+ Answer:- The CNP fraud system become more powerful and increased in the last decade.
+        - EMV chip and CNP transactions had an most impact on card fraud.
+
 - How has the transaction landscape changed in the same period?
     - What kind of transactions have become increasingly popular?
+Answer:- online transactions and cashless transactions have become increasingly popular.
     - What kind of transactions have had a high risk of being fraudulent?
+Answer:- CNP transaction have had a high risk of being fraudulent.
         - Has this changed at all during 2008-2019?
+Answer:- No drastic change occured in the fraud but yes securities are more powerful than before.
 - What effect has internet and e-commerce had on card fraud?
+Answer:- Internet and e-commerce had an most important effect on card fraud. People are more likely to do shopping online and use more internet than before.                Hence, online fraud system drastically increased.
 - Why is preventing data breaches important in preventing card fraud?
     - How does payment card tokenisation help in this?
+ Answer:- It  is important to prevent CNP fraud. payment card tokenisation is a security measure where the actual card details are replaced by unique digital identifiers (tokens) which can be parametrised to be used in a restricted way.  For example, a token provisioned to a mobile phone could be setup to only initiate proximity payments from that particular device by a given cardholder, where the trusted consumer device itself becomes a multi-factor authenticator.
+
+
 -Anything interesting you found?
+Answer:- Report contains the fraud information and highlight the most of the areas.
 
 ---
 
