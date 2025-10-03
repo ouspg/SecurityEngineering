@@ -17,14 +17,21 @@ Task #|Points|Description|
 **Excluding** speculative CPU attacks such as Meltdown or Spectre, choose an example of a side-channel attack and explain the following information about it:
 
 - Brief explanation of what side-channel the attack uses and how
+Answer:- A side channel is where information leaks accidentally via some medium that was not designed or intended for communication; a covert channel is where the leak is deliberate. Side channel attacks are everywhere
 
 - What systems does it affect?
+Answer:- There are conducted or radiated electromagnetic signals, which can compromise information locally and occasionally at longer ranges. These ‘Tempest’ attacks led NATO governments to spend billions of dollars a year on shielding equipment, starting in the 1960s. After the end of the Cold War, people started to realise that there had usually been nobody listening.
 
 - What information is leaked via the side channel?
+Answer:- side channels leak data between tasks on a single device, or between devices that are closely coupled; these can exploit both power and timing information, and also contention for shared system resources.
 
 - Is there a documented case of it being used in a real life attack?
+Answer:- There are attacks that exploit shared local physical resources, such as when a phone listens to keystrokes entered on a nearby keyboard, or indeed on a keyboard on its own touch screen – whether that sensing is done with microphones, the accelerometer and gyro, or even the camera. Another example is that a laser pulse can create a click on a microphone, so a voice command can be given to a home assistant through a window. So far, none of the side-channel attacks on phones and other IoT devices has scaled up to have major impact – but there are ever more of them.
+
 
 - Has it been fixed? If yes, how it was fixed?
+Answer:- , there are attacks that exploit shared social resources. An example is identifying someone in a supposedly anonymous dataset from patterns of communications, location history or even just knowing when they went on holiday. This has led to many poor policy decisions and much wishful thinking around whether personal data can be anonymised sufciently to escape privacy law. There have been both scandalous data leaks, and complaints that data should be made more available for research and other uses.
+
 
 You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources.
 
@@ -37,14 +44,21 @@ You are not expected to produce an essay. Direct answers to questions above are 
 Seek information about the Slowloris Denial-of-Service attack and answer to the following questions:
 
 - How does it work?
+Answer:- The attacker sends partial HTTP requests, but never completing the request. This slowly consumes all available connections, making the server unable to respond.
 
 - Why is it unique while compared to the other high bandwith DDoS attacks?
+Answer:- Its uniqueness lies in its extremely low bandwidth requirement. Unlike high-bandwidth attacks that flood a network with massive data volumes, a single machine with a slow internet connection can execute a Slow Loris attack. It targets server resources rather than network capacity.
+
 
 - What are the effects of the attack?
+Answer:-  legitimate users, who are unable to access the targeted website.
 
 - How can you mitigate/prevent the effects of the attack?
+Answer:- Using services like Cloudflare or hardware from F5, limiting the number of connections from a single IP address, and reducing the connection timeout.
 
 - Are there any notable instances of this style of attack being performed?
+Answer:- The technique was used in the 2009 Iranian presidential election protests to target Iranian government websites.
+
 
 You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources
 
