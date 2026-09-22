@@ -357,5 +357,3 @@ To close the docker image of DVMA, open the terminal window where docker is acti
 >docker info  
 
 ![docker stop](https://user-images.githubusercontent.com/44393530/225863084-e0e0ec21-9b46-480f-9603-a3bd5b72a4fa.PNG)
-
-Return your GitHub repository link containing all the screenshots and explanations to the Moodle return box  
